@@ -1,0 +1,1038 @@
+﻿{
+    "metadata":  {
+                     "source":  "YALE CALENDAR.txt",
+                     "seedType":  "local_text_seed",
+                     "lastUpdated":  "2026-04-21T23:27:14.1287957+09:00",
+                     "eventCount":  97
+                 },
+    "highlights":  [
+                       {
+                           "id":  "FALL 2026|5",
+                           "term":  "FALL 2026",
+                           "date":  "",
+                           "dateLabel":  "Sept. 2",
+                           "dayCode":  "W",
+                           "description":  "Fall classes begin.",
+                           "category":  "classes_begin"
+                       },
+                       {
+                           "id":  "FALL 2026|6",
+                           "term":  "FALL 2026",
+                           "date":  "",
+                           "dateLabel":  "Sept. 4",
+                           "dayCode":  "F",
+                           "description":  "Friday classes do not meet; Monday classes meet instead.",
+                           "category":  "holiday"
+                       },
+                       {
+                           "id":  "FALL 2026|7",
+                           "term":  "FALL 2026",
+                           "date":  "",
+                           "dateLabel":  "Sept. 7",
+                           "dayCode":  "M",
+                           "description":  "Labor Day; classes do not meet.",
+                           "category":  "holiday"
+                       },
+                       {
+                           "id":  "FALL 2026|22",
+                           "term":  "FALL 2026",
+                           "date":  "",
+                           "dateLabel":  "Oct. 20",
+                           "dayCode":  "T",
+                           "description":  "October recess begins after last academic obligation.",
+                           "category":  "recess"
+                       },
+                       {
+                           "id":  "FALL 2026|35",
+                           "term":  "FALL 2026",
+                           "date":  "",
+                           "dateLabel":  "Nov. 20",
+                           "dayCode":  "F",
+                           "description":  "November recess begins after last academic obligation.",
+                           "category":  "recess"
+                       },
+                       {
+                           "id":  "FALL 2026|38",
+                           "term":  "FALL 2026",
+                           "date":  "",
+                           "dateLabel":  "Dec. 11",
+                           "dayCode":  "F",
+                           "description":  "Classes end; reading period begins.",
+                           "category":  "classes_end"
+                       },
+                       {
+                           "id":  "FALL 2026|41",
+                           "term":  "FALL 2026",
+                           "date":  "",
+                           "dateLabel":  "Dec. 14",
+                           "dayCode":  "M",
+                           "description":  "Graduate School classes end.",
+                           "category":  "classes_end"
+                       },
+                       {
+                           "id":  "FALL 2026|42",
+                           "term":  "FALL 2026",
+                           "date":  "",
+                           "dateLabel":  "Dec. 15",
+                           "dayCode":  "T",
+                           "description":  "Final examinations begin. No final exams on Saturday, Dec 19 or Sunday, Dec 20.",
+                           "category":  "finals_period"
+                       },
+                       {
+                           "id":  "FALL 2026|45",
+                           "term":  "FALL 2026",
+                           "date":  "",
+                           "dateLabel":  "Dec. 22",
+                           "dayCode":  "T",
+                           "description":  "Final examinations end. Winter recess begins.",
+                           "category":  "finals_period"
+                       },
+                       {
+                           "id":  "SPRING 2027|55",
+                           "term":  "SPRING 2027",
+                           "date":  "",
+                           "dateLabel":  "Jan. 18",
+                           "dayCode":  "M",
+                           "description":  "Martin Luther King Jr. Day; classes do not meet.",
+                           "category":  "holiday"
+                       },
+                       {
+                           "id":  "SPRING 2027|56",
+                           "term":  "SPRING 2027",
+                           "date":  "",
+                           "dateLabel":  "Jan. 19",
+                           "dayCode":  "T",
+                           "description":  "Spring-term classes begin.",
+                           "category":  "classes_begin"
+                       },
+                       {
+                           "id":  "SPRING 2027|59",
+                           "term":  "SPRING 2027",
+                           "date":  "",
+                           "dateLabel":  "Jan. 29",
+                           "dayCode":  "F",
+                           "description":  "Friday classes do not meet; Monday classes meet instead.",
+                           "category":  "holiday"
+                       },
+                       {
+                           "id":  "SPRING 2027|70",
+                           "term":  "SPRING 2027",
+                           "date":  "",
+                           "dateLabel":  "Mar. 5",
+                           "dayCode":  "F",
+                           "description":  "Spring recess begins after last academic obligation.",
+                           "category":  "recess"
+                       },
+                       {
+                           "id":  "SPRING 2027|82",
+                           "term":  "SPRING 2027",
+                           "date":  "",
+                           "dateLabel":  "Apr. 30",
+                           "dayCode":  "F",
+                           "description":  "Classes end; reading period begins.",
+                           "category":  "classes_end"
+                       },
+                       {
+                           "id":  "SPRING 2027|86",
+                           "term":  "SPRING 2027",
+                           "date":  "",
+                           "dateLabel":  "May 4",
+                           "dayCode":  "T",
+                           "description":  "Graduate school classes end.",
+                           "category":  "classes_end"
+                       },
+                       {
+                           "id":  "SPRING 2027|87",
+                           "term":  "SPRING 2027",
+                           "date":  "",
+                           "dateLabel":  "May 5",
+                           "dayCode":  "W",
+                           "description":  "Final examinations begin. No final exams on Saturday, May 8 or Sunday, May 9.",
+                           "category":  "finals_period"
+                       },
+                       {
+                           "id":  "SPRING 2027|89",
+                           "term":  "SPRING 2027",
+                           "date":  "",
+                           "dateLabel":  "May 12",
+                           "dayCode":  "W",
+                           "description":  "Final examinations end.",
+                           "category":  "finals_period"
+                       }
+                   ],
+    "items":  [
+                  {
+                      "id":  "FALL 2026|0",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Aug. 17",
+                      "dayCode":  "M",
+                      "description":  "Registration opens for first-year students, 12 p.m. and remains open until the close of add/drop period.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "FALL 2026|1",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Aug. 23",
+                      "dayCode":  "Su",
+                      "description":  "Residences open to new students, 9:00 a.m.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|2",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Aug. 26",
+                      "dayCode":  "W",
+                      "description":  "Add/drop period opens, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "FALL 2026|3",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Aug. 30",
+                      "dayCode":  "Su",
+                      "description":  "Residences open to upper-level students, 9:00 a.m.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|4",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 1",
+                      "dayCode":  "T",
+                      "description":  "Required check-in meetings for upper-level students (Class of 2029, 9:00 a.m.; Class of 2028, 9:45 a.m.; Class of 2027, 10:30 a.m.)",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|5",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 2",
+                      "dayCode":  "W",
+                      "description":  "Fall classes begin.",
+                      "category":  "classes_begin"
+                  },
+                  {
+                      "id":  "FALL 2026|6",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 4",
+                      "dayCode":  "F",
+                      "description":  "Friday classes do not meet; Monday classes meet instead.",
+                      "category":  "holiday"
+                  },
+                  {
+                      "id":  "FALL 2026|7",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 7",
+                      "dayCode":  "M",
+                      "description":  "Labor Day; classes do not meet.",
+                      "category":  "holiday"
+                  },
+                  {
+                      "id":  "FALL 2026|8",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 11",
+                      "dayCode":  "F",
+                      "description":  "Add/drop period ends, 5:00 p.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "FALL 2026|9",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 15",
+                      "dayCode":  "M",
+                      "description":  "All students planning to complete degree requirements at the end of the fall term must file a petition by this date.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|10",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 15",
+                      "dayCode":  "M",
+                      "description":  "Students in their final term of enrollment must petition to complete the requirements of two majors by this date.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|11",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 15",
+                      "dayCode":  "M",
+                      "description":  "Students in their final term of enrollment planning to change their major, must by this date, declare as such in Yale Hub.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|12",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 15",
+                      "dayCode":  "M",
+                      "description":  "Students in their final term of enrollment planning to earn a certificate, must by this date, declare as such in Yale Hub.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|13",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 16",
+                      "dayCode":  "W",
+                      "description":  "Final deadline to apply for fall-term Leave of Absence.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|14",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 16",
+                      "dayCode":  "W",
+                      "description":  "Withdrawal from Yale College on or before this date entitles a student to a full rebate of fall-term tuition (Undergraduate Regulations).",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|15",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 24",
+                      "dayCode":  "Th",
+                      "description":  "Last day to withdraw from a course offered in the first half of the fall term without the course appearing on the transcript.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|16",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Sept. 26",
+                      "dayCode":  "S",
+                      "description":  "Withdrawal from Yale College on or before this date entitles a student to a rebate of one-half of fall-term tuition. See Undergraduate Regulations.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|17",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 1",
+                      "dayCode":  "Th",
+                      "description":  "Applications close for spring 2027 Term Abroad.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|18",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 16",
+                      "dayCode":  "F",
+                      "description":  "Last day of courses offered in the first half of the fall term.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|19",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 16",
+                      "dayCode":  "F",
+                      "description":  "Last day to withdraw from a course offered in the first half of the fall term.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|20",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 16",
+                      "dayCode":  "F",
+                      "description":  "Last day to convert from a letter grade to the Cr/D/F option in a course offered in the first half of the fall term.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|21",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 19",
+                      "dayCode":  "M",
+                      "description":  "Courses offered in the second half of the fall term begin.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|22",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 20",
+                      "dayCode":  "T",
+                      "description":  "October recess begins after last academic obligation.",
+                      "category":  "recess"
+                  },
+                  {
+                      "id":  "FALL 2026|23",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 20",
+                      "dayCode":  "T",
+                      "description":  "Midterm.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|24",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 20",
+                      "dayCode":  "T",
+                      "description":  "Last day to withdraw from a fall full-term course without the course appearing on the transcript.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|25",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 20",
+                      "dayCode":  "T",
+                      "description":  "Deadline to apply for double credit in a single-credit course.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|26",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 20",
+                      "dayCode":  "T",
+                      "description":  "Withdrawal from Yale College on or before this date entitles a student to a rebate of one-quarter of the term\u0027s tuition.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|27",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 20",
+                      "dayCode":  "T",
+                      "description":  "Final ABX exam grades are due.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|28",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Oct. 26",
+                      "dayCode":  "M",
+                      "description":  "Classes resume.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|29",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Nov. 12",
+                      "dayCode":  "Th",
+                      "description":  "Last day to withdraw from a course offered in the second half of the fall term without the course appearing on the transcript.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|30",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Nov. 13",
+                      "dayCode":  "F",
+                      "description":  "Spring term registration opens for Graduate School students, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "FALL 2026|31",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Nov. 16",
+                      "dayCode":  "M",
+                      "description":  "Spring term registration opens for Class of 2027, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "FALL 2026|32",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Nov. 17",
+                      "dayCode":  "T",
+                      "description":  "Spring term registration opens for Class of 2028, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "FALL 2026|33",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Nov. 18",
+                      "dayCode":  "W",
+                      "description":  "Spring term registration opens for Class of 2029, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "FALL 2026|34",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Nov. 19",
+                      "dayCode":  "Th",
+                      "description":  "Spring term registration opens for Class of 2030, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "FALL 2026|35",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Nov. 20",
+                      "dayCode":  "F",
+                      "description":  "November recess begins after last academic obligation.",
+                      "category":  "recess"
+                  },
+                  {
+                      "id":  "FALL 2026|36",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Nov. 30",
+                      "dayCode":  "M",
+                      "description":  "Last day to relinquish on-campus housing for the spring term without charge (Undergraduate Regulations).",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|37",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Nov. 30",
+                      "dayCode":  "M",
+                      "description":  "Classes resume.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|38",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 11",
+                      "dayCode":  "F",
+                      "description":  "Classes end; reading period begins.",
+                      "category":  "classes_end"
+                  },
+                  {
+                      "id":  "FALL 2026|39",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 11",
+                      "dayCode":  "F",
+                      "description":  "Last day to convert from a letter grade to the Cr/D/F option for a full-term course and/or a course offered in the second half of the fall term.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|40",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 11",
+                      "dayCode":  "F",
+                      "description":  "Last day to withdraw from a full-term course and/or a course offered in the second half of the fall term.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|41",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 14",
+                      "dayCode":  "M",
+                      "description":  "Graduate School classes end.",
+                      "category":  "classes_end"
+                  },
+                  {
+                      "id":  "FALL 2026|42",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 15",
+                      "dayCode":  "T",
+                      "description":  "Final examinations begin. No final exams on Saturday, Dec 19 or Sunday, Dec 20.",
+                      "category":  "finals_period"
+                  },
+                  {
+                      "id":  "FALL 2026|43",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 20",
+                      "dayCode":  "Su",
+                      "description":  "Deadline for all course assignments, other than term papers and term projects. This deadline can be extended only by a Temporary Incomplete (TI) authorized by the student’s residential college dean.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|44",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 22",
+                      "dayCode":  "T",
+                      "description":  "Spring term registration closes for all GSAS \u0026 YC students, 5:00 p.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "FALL 2026|45",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 22",
+                      "dayCode":  "T",
+                      "description":  "Final examinations end. Winter recess begins.",
+                      "category":  "finals_period"
+                  },
+                  {
+                      "id":  "FALL 2026|46",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 22",
+                      "dayCode":  "T",
+                      "description":  "Deadline for all term papers and term projects. This deadline can be extended only by a Temporary Incomplete (TI) authorized by the student’s residential college dean.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|47",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 22",
+                      "dayCode":  "T",
+                      "description":  "Official degree conferral date for fall 2026. Degree clearance begins once final grades have been submitted.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "FALL 2026|48",
+                      "term":  "FALL 2026",
+                      "date":  "",
+                      "dateLabel":  "Dec. 23",
+                      "dayCode":  "W",
+                      "description":  "Residences close, 12 noon.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|49",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 4",
+                      "dayCode":  "M",
+                      "description":  "Fall-term final grades due.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|50",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 12",
+                      "dayCode":  "T",
+                      "description":  "Add/drop period opens for all GSAS \u0026 YC students, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "SPRING 2027|51",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 15",
+                      "dayCode":  "F",
+                      "description":  "Residences open, 9:00 a.m.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|52",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 15",
+                      "dayCode":  "F",
+                      "description":  "Students in their final term of enrollment must petition for permission to complete the requirements of two majors by this date.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|53",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 15",
+                      "dayCode":  "F",
+                      "description":  "Students in their final term of enrollment planning to change their major, must by this date, declare as such in Yale Hub.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|54",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 15",
+                      "dayCode":  "F",
+                      "description":  "Students in their final term of enrollment planning to earn a certificate, must by this date, declare as such in Yale Hub.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|55",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 18",
+                      "dayCode":  "M",
+                      "description":  "Martin Luther King Jr. Day; classes do not meet.",
+                      "category":  "holiday"
+                  },
+                  {
+                      "id":  "SPRING 2027|56",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 19",
+                      "dayCode":  "T",
+                      "description":  "Spring-term classes begin.",
+                      "category":  "classes_begin"
+                  },
+                  {
+                      "id":  "SPRING 2027|57",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 26",
+                      "dayCode":  "T",
+                      "description":  "Applications close for 2027 Yale Summer Session Programs Abroad.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|58",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 29",
+                      "dayCode":  "F",
+                      "description":  "Add/drop period closes for all GSAS \u0026 YC students, 5:00 p.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "SPRING 2027|59",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Jan. 29",
+                      "dayCode":  "F",
+                      "description":  "Friday classes do not meet; Monday classes meet instead.",
+                      "category":  "holiday"
+                  },
+                  {
+                      "id":  "SPRING 2027|60",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Feb. 2",
+                      "dayCode":  "T",
+                      "description":  "Final deadline to apply for a spring-term Leave of Absence.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|61",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Feb. 2",
+                      "dayCode":  "T",
+                      "description":  "Withdrawal from Yale College on or before this date entitles the student to a full rebate of spring-term tuition (Undergraduate Regulations).",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|62",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Feb. 9",
+                      "dayCode":  "T",
+                      "description":  "Last day to withdraw from a course offered in the first half of the spring term without the course appearing on the transcript.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|63",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Feb. 12",
+                      "dayCode":  "F",
+                      "description":  "Withdrawal from Yale College on or before this date entitles a student to a rebate of one-half of spring-term tuition (Undergraduate Regulations).",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|64",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 1",
+                      "dayCode":  "M",
+                      "description":  "Applications close for Non-Yale 2027 Summer Abroad.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|65",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 3",
+                      "dayCode":  "W",
+                      "description":  "Last day of courses offered in the first half of the spring term.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|66",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 3",
+                      "dayCode":  "W",
+                      "description":  "Last day to withdraw from a course offered in the first half of the spring term.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|67",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 3",
+                      "dayCode":  "W",
+                      "description":  "Last day to convert from a letter grade to Cr/D/F option for a course offered in the first half of the spring term.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|68",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 4",
+                      "dayCode":  "Th",
+                      "description":  "Courses offered in the second half of the spring term begin.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|69",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 5",
+                      "dayCode":  "F",
+                      "description":  "Midterm.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|70",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 5",
+                      "dayCode":  "F",
+                      "description":  "Spring recess begins after last academic obligation.",
+                      "category":  "recess"
+                  },
+                  {
+                      "id":  "SPRING 2027|71",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 5",
+                      "dayCode":  "F",
+                      "description":  "Last day to withdraw from a spring full-term course without the course appearing on the transcript.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|72",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 5",
+                      "dayCode":  "F",
+                      "description":  "Deadline to apply for double credit in a single-credit course.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|73",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 5",
+                      "dayCode":  "F",
+                      "description":  "Withdrawal from Yale College on or before this date entitles a student to a rebate of one-quarter of the term’s tuition (Undergraduate Regulations).",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|74",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 5",
+                      "dayCode":  "F",
+                      "description":  "Final ABX exam grades are due.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|75",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Mar. 22",
+                      "dayCode":  "M",
+                      "description":  "Classes resume.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|76",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Apr. 1",
+                      "dayCode":  "Th",
+                      "description":  "Applications close for fall 2027 Term Abroad or 2027–2028 Year Abroad close.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|77",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Apr. 8",
+                      "dayCode":  "Th",
+                      "description":  "Last day to withdraw from a spring second-half course without the course appearing on the transcript.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|78",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Apr. 9",
+                      "dayCode":  "F",
+                      "description":  "Fall term registration opens for Graduate School students, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "SPRING 2027|79",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Apr. 12",
+                      "dayCode":  "M",
+                      "description":  "Fall term registration opens for Class of 2028, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "SPRING 2027|80",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Apr. 13",
+                      "dayCode":  "T",
+                      "description":  "Fall term registration opens for Class of 2029, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "SPRING 2027|81",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Apr. 14",
+                      "dayCode":  "W",
+                      "description":  "Fall term registration opens for Class of 2030, 8:00 a.m.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "SPRING 2027|82",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Apr. 30",
+                      "dayCode":  "F",
+                      "description":  "Classes end; reading period begins.",
+                      "category":  "classes_end"
+                  },
+                  {
+                      "id":  "SPRING 2027|83",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Apr. 30",
+                      "dayCode":  "F",
+                      "description":  "Last day to convert from a letter grade to Cr/D/F option for a full-term course and/or a course offered in the second half of the spring term.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|84",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "Apr. 30",
+                      "dayCode":  "F",
+                      "description":  "Last day to withdraw from a full-term course and/or a course offered in the second half of the spring term.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|85",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 1",
+                      "dayCode":  "F",
+                      "description":  "Applications for fall-term Leaves of Absence due.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|86",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 4",
+                      "dayCode":  "T",
+                      "description":  "Graduate school classes end.",
+                      "category":  "classes_end"
+                  },
+                  {
+                      "id":  "SPRING 2027|87",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 5",
+                      "dayCode":  "W",
+                      "description":  "Final examinations begin. No final exams on Saturday, May 8 or Sunday, May 9.",
+                      "category":  "finals_period"
+                  },
+                  {
+                      "id":  "SPRING 2027|88",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 9",
+                      "dayCode":  "Su",
+                      "description":  "Deadline for all course assignments, other than term papers and term projects. This deadline can be extended only by a Temporary Incomplete (TI) authorized by the student’s residential college dean.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|89",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 12",
+                      "dayCode":  "W",
+                      "description":  "Final examinations end.",
+                      "category":  "finals_period"
+                  },
+                  {
+                      "id":  "SPRING 2027|90",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 12",
+                      "dayCode":  "W",
+                      "description":  "Deadline for all term papers and term projects. This deadline can be extended only by a Temporary Incomplete (TI) authorized by the student’s residential college dean.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|91",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 13",
+                      "dayCode":  "Th",
+                      "description":  "Residences close for non-seniors, 3 p.m.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|92",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 14",
+                      "dayCode":  "F",
+                      "description":  "Final grades due for graduating seniors.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|93",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 19",
+                      "dayCode":  "W",
+                      "description":  "Final grades due for continuing students.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|94",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 21",
+                      "dayCode":  "F",
+                      "description":  "Registration closes for Yale College and Graduate School students.",
+                      "category":  "registration"
+                  },
+                  {
+                      "id":  "SPRING 2027|95",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 24",
+                      "dayCode":  "M",
+                      "description":  "University Commencement.",
+                      "category":  "academic_deadline"
+                  },
+                  {
+                      "id":  "SPRING 2027|96",
+                      "term":  "SPRING 2027",
+                      "date":  "",
+                      "dateLabel":  "May 25",
+                      "dayCode":  "T",
+                      "description":  "Residences close for seniors, 12 noon.",
+                      "category":  "academic_deadline"
+                  }
+              ]
+}

@@ -1,0 +1,802 @@
+﻿{
+    "metadata":  {
+                     "source":  "SPRING 2026 PWG.txt",
+                     "seedType":  "local_text_seed",
+                     "currentTerm":  "Spring 2026",
+                     "lastUpdated":  "2026-04-22T02:04:25.4882352+09:00",
+                     "itemCount":  38
+                 },
+    "items":  [
+                  {
+                      "id":  "pwg-seed-0",
+                      "sourceId":  "local-seed-0",
+                      "term":  "Spring 2026",
+                      "day":  "Mon",
+                      "dayOrder":  0,
+                      "title":  "Ride 45",
+                      "instructor":  "Alicia B.",
+                      "startTime":  "7:00 AM",
+                      "endTime":  "8:00 AM",
+                      "startMinutes":  420,
+                      "endMinutes":  480,
+                      "passEligibility":  "All Access, Cycling, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Cycling",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Ride 45 Alicia B. All Access, Cycling, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-1",
+                      "sourceId":  "local-seed-1",
+                      "term":  "Spring 2026",
+                      "day":  "Mon",
+                      "dayOrder":  0,
+                      "title":  "Vinyasa Flow",
+                      "instructor":  "Prajna K.",
+                      "startTime":  "5:30 PM",
+                      "endTime":  "6:30 PM",
+                      "startMinutes":  1050,
+                      "endMinutes":  1110,
+                      "passEligibility":  "All Access, Yoga, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Vinyasa Flow Prajna K. All Access, Yoga, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-2",
+                      "sourceId":  "local-seed-2",
+                      "term":  "Spring 2026",
+                      "day":  "Mon",
+                      "dayOrder":  0,
+                      "title":  "Ride 45",
+                      "instructor":  "Danielle U.",
+                      "startTime":  "6:00 PM",
+                      "endTime":  "7:00 PM",
+                      "startMinutes":  1080,
+                      "endMinutes":  1140,
+                      "passEligibility":  "All Access, Cycling, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Cycling",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Ride 45 Danielle U. All Access, Cycling, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-3",
+                      "sourceId":  "local-seed-3",
+                      "term":  "Spring 2026",
+                      "day":  "Mon",
+                      "dayOrder":  0,
+                      "title":  "Pumped Up Strength",
+                      "instructor":  "Emi S.",
+                      "startTime":  "6:00 PM",
+                      "endTime":  "7:00 PM",
+                      "startMinutes":  1080,
+                      "endMinutes":  1140,
+                      "passEligibility":  "All Access, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Pumped Up Strength Emi S. All Access, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-4",
+                      "sourceId":  "local-seed-4",
+                      "term":  "Spring 2026",
+                      "day":  "Mon",
+                      "dayOrder":  0,
+                      "title":  "Werq",
+                      "instructor":  "Emily P.",
+                      "startTime":  "6:30 PM",
+                      "endTime":  "7:30 PM",
+                      "startMinutes":  1110,
+                      "endMinutes":  1170,
+                      "passEligibility":  "All Access, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Werq Emily P. All Access, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-5",
+                      "sourceId":  "local-seed-5",
+                      "term":  "Spring 2026",
+                      "day":  "Mon",
+                      "dayOrder":  0,
+                      "title":  "Yoga Sculpt",
+                      "instructor":  "Macarena F.D.",
+                      "startTime":  "7:40 PM",
+                      "endTime":  "8:40 PM",
+                      "startMinutes":  1180,
+                      "endMinutes":  1240,
+                      "passEligibility":  "All Access, Yoga, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Yoga Sculpt Macarena F.D. All Access, Yoga, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-6",
+                      "sourceId":  "local-seed-6",
+                      "term":  "Spring 2026",
+                      "day":  "Tue",
+                      "dayOrder":  1,
+                      "title":  "Pilates \u0026 Stretch",
+                      "instructor":  "Alicia B.",
+                      "startTime":  "7:30 AM",
+                      "endTime":  "8:30 AM",
+                      "startMinutes":  450,
+                      "endMinutes":  510,
+                      "passEligibility":  "All Access, Yoga, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Pilates \u0026 Stretch Alicia B. All Access, Yoga, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-7",
+                      "sourceId":  "local-seed-7",
+                      "term":  "Spring 2026",
+                      "day":  "Tue",
+                      "dayOrder":  1,
+                      "title":  "Ride \u0026 Rip",
+                      "instructor":  "Teni A.",
+                      "startTime":  "8:00 AM",
+                      "endTime":  "9:00 AM",
+                      "startMinutes":  480,
+                      "endMinutes":  540,
+                      "passEligibility":  "All Access, Cycling, GroupX, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Cycling",
+                                                   "GroupX",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Ride \u0026 Rip Teni A. All Access, Cycling, GroupX, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-8",
+                      "sourceId":  "local-seed-8",
+                      "term":  "Spring 2026",
+                      "day":  "Tue",
+                      "dayOrder":  1,
+                      "title":  "Hatha Yoga",
+                      "instructor":  "Amy V.",
+                      "startTime":  "4:30 PM",
+                      "endTime":  "5:30 PM",
+                      "startMinutes":  990,
+                      "endMinutes":  1050,
+                      "passEligibility":  "All Access, Yoga, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Hatha Yoga Amy V. All Access, Yoga, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-9",
+                      "sourceId":  "local-seed-9",
+                      "term":  "Spring 2026",
+                      "day":  "Tue",
+                      "dayOrder":  1,
+                      "title":  "Yoga Sculpt",
+                      "instructor":  "Lauren O.",
+                      "startTime":  "5:00 PM",
+                      "endTime":  "6:00 PM",
+                      "startMinutes":  1020,
+                      "endMinutes":  1080,
+                      "passEligibility":  "All Access, Yoga, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Yoga Sculpt Lauren O. All Access, Yoga, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-10",
+                      "sourceId":  "local-seed-10",
+                      "term":  "Spring 2026",
+                      "day":  "Tue",
+                      "dayOrder":  1,
+                      "title":  "Cardio Dance",
+                      "instructor":  "Amy V.",
+                      "startTime":  "5:30 PM",
+                      "endTime":  "6:30 PM",
+                      "startMinutes":  1050,
+                      "endMinutes":  1110,
+                      "passEligibility":  "All Access, Yoga, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Cardio Dance Amy V. All Access, Yoga, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-11",
+                      "sourceId":  "local-seed-11",
+                      "term":  "Spring 2026",
+                      "day":  "Tue",
+                      "dayOrder":  1,
+                      "title":  "Barre/Stretch Fusion",
+                      "instructor":  "Sakura G.",
+                      "startTime":  "6:00 PM",
+                      "endTime":  "7:00 PM",
+                      "startMinutes":  1080,
+                      "endMinutes":  1140,
+                      "passEligibility":  "All Access, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Barre/Stretch Fusion Sakura G. All Access, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-12",
+                      "sourceId":  "local-seed-12",
+                      "term":  "Spring 2026",
+                      "day":  "Tue",
+                      "dayOrder":  1,
+                      "title":  "Ride 45",
+                      "instructor":  "Emma B.",
+                      "startTime":  "6:00 PM",
+                      "endTime":  "7:00 PM",
+                      "startMinutes":  1080,
+                      "endMinutes":  1140,
+                      "passEligibility":  "All Access, Cycling, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Cycling",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Ride 45 Emma B. All Access, Cycling, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-13",
+                      "sourceId":  "local-seed-13",
+                      "term":  "Spring 2026",
+                      "day":  "Tue",
+                      "dayOrder":  1,
+                      "title":  "Muscular Development",
+                      "instructor":  "Emi S.",
+                      "startTime":  "6:30 PM",
+                      "endTime":  "7:30 PM",
+                      "startMinutes":  1110,
+                      "endMinutes":  1170,
+                      "passEligibility":  "All Access, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Muscular Development Emi S. All Access, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-14",
+                      "sourceId":  "local-seed-14",
+                      "term":  "Spring 2026",
+                      "day":  "Tue",
+                      "dayOrder":  1,
+                      "title":  "Vinyasa Flow",
+                      "instructor":  "Annabelle C.",
+                      "startTime":  "7:00 PM",
+                      "endTime":  "8:00 PM",
+                      "startMinutes":  1140,
+                      "endMinutes":  1200,
+                      "passEligibility":  "All Access, Yoga, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Vinyasa Flow Annabelle C. All Access, Yoga, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-15",
+                      "sourceId":  "local-seed-15",
+                      "term":  "Spring 2026",
+                      "day":  "Wed",
+                      "dayOrder":  2,
+                      "title":  "Ride 45",
+                      "instructor":  "Emma B.",
+                      "startTime":  "7:00 AM",
+                      "endTime":  "8:00 AM",
+                      "startMinutes":  420,
+                      "endMinutes":  480,
+                      "passEligibility":  "All Access, Cycling, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Cycling",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Ride 45 Emma B. All Access, Cycling, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-16",
+                      "sourceId":  "local-seed-16",
+                      "term":  "Spring 2026",
+                      "day":  "Wed",
+                      "dayOrder":  2,
+                      "title":  "Yoga Sculpt",
+                      "instructor":  "Lauren O.",
+                      "startTime":  "7:30 AM",
+                      "endTime":  "8:30 AM",
+                      "startMinutes":  450,
+                      "endMinutes":  510,
+                      "passEligibility":  "All Access, Yoga, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Yoga Sculpt Lauren O. All Access, Yoga, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-17",
+                      "sourceId":  "local-seed-17",
+                      "term":  "Spring 2026",
+                      "day":  "Wed",
+                      "dayOrder":  2,
+                      "title":  "Pilates \u0026 Stretch",
+                      "instructor":  "Inara J.",
+                      "startTime":  "9:00 AM",
+                      "endTime":  "10:00 AM",
+                      "startMinutes":  540,
+                      "endMinutes":  600,
+                      "passEligibility":  "All Access, Yoga, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Pilates \u0026 Stretch Inara J. All Access, Yoga, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-18",
+                      "sourceId":  "local-seed-18",
+                      "term":  "Spring 2026",
+                      "day":  "Wed",
+                      "dayOrder":  2,
+                      "title":  "Vinyasa Flow",
+                      "instructor":  "Macarena F.D.",
+                      "startTime":  "5:30 PM",
+                      "endTime":  "6:30 PM",
+                      "startMinutes":  1050,
+                      "endMinutes":  1110,
+                      "passEligibility":  "All Access, Yoga, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Vinyasa Flow Macarena F.D. All Access, Yoga, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-19",
+                      "sourceId":  "local-seed-19",
+                      "term":  "Spring 2026",
+                      "day":  "Wed",
+                      "dayOrder":  2,
+                      "title":  "Pumped Up Strength",
+                      "instructor":  "Emi S.",
+                      "startTime":  "6:00 PM",
+                      "endTime":  "7:00 PM",
+                      "startMinutes":  1080,
+                      "endMinutes":  1140,
+                      "passEligibility":  "All Access, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Pumped Up Strength Emi S. All Access, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-20",
+                      "sourceId":  "local-seed-20",
+                      "term":  "Spring 2026",
+                      "day":  "Thu",
+                      "dayOrder":  3,
+                      "title":  "Sculpt",
+                      "instructor":  "Alicia B.",
+                      "startTime":  "7:30 AM",
+                      "endTime":  "8:30 AM",
+                      "startMinutes":  450,
+                      "endMinutes":  510,
+                      "passEligibility":  "All Access, Yoga, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Sculpt Alicia B. All Access, Yoga, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-21",
+                      "sourceId":  "local-seed-21",
+                      "term":  "Spring 2026",
+                      "day":  "Thu",
+                      "dayOrder":  3,
+                      "title":  "Hatha Yoga",
+                      "instructor":  "Amy V.",
+                      "startTime":  "4:30 AM",
+                      "endTime":  "5:30 AM",
+                      "startMinutes":  270,
+                      "endMinutes":  330,
+                      "passEligibility":  "All Access, Yoga, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Hatha Yoga Amy V. All Access, Yoga, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-22",
+                      "sourceId":  "local-seed-22",
+                      "term":  "Spring 2026",
+                      "day":  "Thu",
+                      "dayOrder":  3,
+                      "title":  "HIIT",
+                      "instructor":  "Ana K.",
+                      "startTime":  "5:00 PM",
+                      "endTime":  "6:00 PM",
+                      "startMinutes":  1020,
+                      "endMinutes":  1080,
+                      "passEligibility":  "All Access, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "HIIT Ana K. All Access, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-23",
+                      "sourceId":  "local-seed-23",
+                      "term":  "Spring 2026",
+                      "day":  "Thu",
+                      "dayOrder":  3,
+                      "title":  "Dance 1",
+                      "instructor":  "Sakura G.",
+                      "startTime":  "5:30 PM",
+                      "endTime":  "6:30 PM",
+                      "startMinutes":  1050,
+                      "endMinutes":  1110,
+                      "passEligibility":  "All Access, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Dance 1 Sakura G. All Access, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-24",
+                      "sourceId":  "local-seed-24",
+                      "term":  "Spring 2026",
+                      "day":  "Thu",
+                      "dayOrder":  3,
+                      "title":  "Biker Bootcamp",
+                      "instructor":  "Aron E.",
+                      "startTime":  "5:30 PM",
+                      "endTime":  "6:30 PM",
+                      "startMinutes":  1050,
+                      "endMinutes":  1110,
+                      "passEligibility":  "All Access, Cycling, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Cycling",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Biker Bootcamp Aron E. All Access, Cycling, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-25",
+                      "sourceId":  "local-seed-25",
+                      "term":  "Spring 2026",
+                      "day":  "Thu",
+                      "dayOrder":  3,
+                      "title":  "Bootcamp",
+                      "instructor":  "Aron E.",
+                      "startTime":  "6:30 PM",
+                      "endTime":  "7:30 PM",
+                      "startMinutes":  1110,
+                      "endMinutes":  1170,
+                      "passEligibility":  "All Access, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Bootcamp Aron E. All Access, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-26",
+                      "sourceId":  "local-seed-26",
+                      "term":  "Spring 2026",
+                      "day":  "Thu",
+                      "dayOrder":  3,
+                      "title":  "Vinyasa Flow",
+                      "instructor":  "Breanna L.",
+                      "startTime":  "6:30 PM",
+                      "endTime":  "7:30 PM",
+                      "startMinutes":  1110,
+                      "endMinutes":  1170,
+                      "passEligibility":  "All Access, Yoga, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Vinyasa Flow Breanna L. All Access, Yoga, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-27",
+                      "sourceId":  "local-seed-27",
+                      "term":  "Spring 2026",
+                      "day":  "Fri",
+                      "dayOrder":  4,
+                      "title":  "Ride 45",
+                      "instructor":  "Violet K.",
+                      "startTime":  "7:00 AM",
+                      "endTime":  "8:00 AM",
+                      "startMinutes":  420,
+                      "endMinutes":  480,
+                      "passEligibility":  "All Access, Cycling, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Cycling",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Ride 45 Violet K. All Access, Cycling, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-28",
+                      "sourceId":  "local-seed-28",
+                      "term":  "Spring 2026",
+                      "day":  "Fri",
+                      "dayOrder":  4,
+                      "title":  "Vinyasa Flow",
+                      "instructor":  "Breanna L.",
+                      "startTime":  "9:30 AM",
+                      "endTime":  "10:30 AM",
+                      "startMinutes":  570,
+                      "endMinutes":  630,
+                      "passEligibility":  "All Access, Yoga, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Vinyasa Flow Breanna L. All Access, Yoga, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-29",
+                      "sourceId":  "local-seed-29",
+                      "term":  "Spring 2026",
+                      "day":  "Fri",
+                      "dayOrder":  4,
+                      "title":  "Pilates \u0026 Stretch",
+                      "instructor":  "Alicia B.",
+                      "startTime":  "11:00 AM",
+                      "endTime":  "12:00 PM",
+                      "startMinutes":  660,
+                      "endMinutes":  720,
+                      "passEligibility":  "All Access, Yoga, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Pilates \u0026 Stretch Alicia B. All Access, Yoga, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-30",
+                      "sourceId":  "local-seed-30",
+                      "term":  "Spring 2026",
+                      "day":  "Fri",
+                      "dayOrder":  4,
+                      "title":  "Ride \u0026 Rip",
+                      "instructor":  "Teni A.",
+                      "startTime":  "4:00 PM",
+                      "endTime":  "5:00 PM",
+                      "startMinutes":  960,
+                      "endMinutes":  1020,
+                      "passEligibility":  "All Access, Cycling, GroupX, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Cycling",
+                                                   "GroupX",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Ride \u0026 Rip Teni A. All Access, Cycling, GroupX, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-31",
+                      "sourceId":  "local-seed-31",
+                      "term":  "Spring 2026",
+                      "day":  "Sat",
+                      "dayOrder":  5,
+                      "title":  "Sculpt",
+                      "instructor":  "Rotating Instructor",
+                      "startTime":  "10:00 AM",
+                      "endTime":  "11:00 AM",
+                      "startMinutes":  600,
+                      "endMinutes":  660,
+                      "passEligibility":  "All Access, Yoga, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Sculpt Rotating Instructor All Access, Yoga, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-32",
+                      "sourceId":  "local-seed-32",
+                      "term":  "Spring 2026",
+                      "day":  "Sat",
+                      "dayOrder":  5,
+                      "title":  "Werq",
+                      "instructor":  "Emily P.",
+                      "startTime":  "10:30 AM",
+                      "endTime":  "11:30 AM",
+                      "startMinutes":  630,
+                      "endMinutes":  690,
+                      "passEligibility":  "All Access, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Werq Emily P. All Access, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-33",
+                      "sourceId":  "local-seed-33",
+                      "term":  "Spring 2026",
+                      "day":  "Sun",
+                      "dayOrder":  6,
+                      "title":  "Pilates \u0026 Stretch",
+                      "instructor":  "Danielle U.",
+                      "startTime":  "9:00 AM",
+                      "endTime":  "10:00 AM",
+                      "startMinutes":  540,
+                      "endMinutes":  600,
+                      "passEligibility":  "All Access, Yoga, GroupX 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "GroupX 1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Pilates \u0026 Stretch Danielle U. All Access, Yoga, GroupX 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-34",
+                      "sourceId":  "local-seed-34",
+                      "term":  "Spring 2026",
+                      "day":  "Sun",
+                      "dayOrder":  6,
+                      "title":  "Ride 45",
+                      "instructor":  "Danielle U.",
+                      "startTime":  "10:00 AM",
+                      "endTime":  "11:00 AM",
+                      "startMinutes":  600,
+                      "endMinutes":  660,
+                      "passEligibility":  "All Access, Cycling, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Cycling",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Ride 45 Danielle U. All Access, Cycling, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-35",
+                      "sourceId":  "local-seed-35",
+                      "term":  "Spring 2026",
+                      "day":  "Sun",
+                      "dayOrder":  6,
+                      "title":  "Vinyasa Flow",
+                      "instructor":  "Macarena F.D.",
+                      "startTime":  "10:00 AM",
+                      "endTime":  "11:00 AM",
+                      "startMinutes":  600,
+                      "endMinutes":  660,
+                      "passEligibility":  "All Access, Yoga, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Vinyasa Flow Macarena F.D. All Access, Yoga, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-36",
+                      "sourceId":  "local-seed-36",
+                      "term":  "Spring 2026",
+                      "day":  "Sun",
+                      "dayOrder":  6,
+                      "title":  "Ride 45",
+                      "instructor":  "Kristen T.",
+                      "startTime":  "4:00 PM",
+                      "endTime":  "5:00 PM",
+                      "startMinutes":  960,
+                      "endMinutes":  1020,
+                      "passEligibility":  "All Access, Cycling, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Cycling",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Ride 45 Kristen T. All Access, Cycling, 1-Week/Trial",
+                      "externalUrl":  null
+                  },
+                  {
+                      "id":  "pwg-seed-37",
+                      "sourceId":  "local-seed-37",
+                      "term":  "Spring 2026",
+                      "day":  "Sun",
+                      "dayOrder":  6,
+                      "title":  "Sunday Reset Flow",
+                      "instructor":  "Annabelle C.",
+                      "startTime":  "5:00 PM",
+                      "endTime":  "6:00 PM",
+                      "startMinutes":  1020,
+                      "endMinutes":  1080,
+                      "passEligibility":  "All Access, Yoga, 1-Week/Trial",
+                      "passEligibilityParts":  [
+                                                   "All Access",
+                                                   "Yoga",
+                                                   "1-Week/Trial"
+                                               ],
+                      "keywordBlob":  "Sunday Reset Flow Annabelle C. All Access, Yoga, 1-Week/Trial",
+                      "externalUrl":  null
+                  }
+              ]
+}

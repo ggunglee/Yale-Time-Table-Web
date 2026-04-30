@@ -1,0 +1,103 @@
+FALL 2026
+Term CalendarTerm CalendarTerm Calendar
+Date	Day	Description
+Aug. 17	M	Registration opens for first-year students, 12 p.m. and remains open until the close of add/drop period.
+Aug. 23	Su	Residences open to new students, 9:00 a.m.
+Aug. 26	W	Add/drop period opens, 8:00 a.m.
+Aug. 30	Su	Residences open to upper-level students, 9:00 a.m.
+Sept. 1	T	Required check-in meetings for upper-level students (Class of 2029, 9:00 a.m.; Class of 2028, 9:45 a.m.; Class of 2027, 10:30 a.m.)
+Sept. 2	W	Fall classes begin.
+Sept. 4	F	Friday classes do not meet; Monday classes meet instead.
+Sept. 7	M	Labor Day; classes do not meet.
+Sept. 11	F	Add/drop period ends, 5:00 p.m.
+Sept. 15	M	All students planning to complete degree requirements at the end of the fall term must file a petition by this date.
+Sept. 15	M	Students in their final term of enrollment must petition to complete the requirements of two majors by this date.
+Sept. 15	M	Students in their final term of enrollment planning to change their major, must by this date, declare as such in Yale Hub.
+Sept. 15	M	Students in their final term of enrollment planning to earn a certificate, must by this date, declare as such in Yale Hub.
+Sept. 16	W	Final deadline to apply for fall-term Leave of Absence.
+Sept. 16	W	Withdrawal from Yale College on or before this date entitles a student to a full rebate of fall-term tuition (Undergraduate Regulations).
+Sept. 24	Th	Last day to withdraw from a course offered in the first half of the fall term without the course appearing on the transcript.
+Sept. 26	S	Withdrawal from Yale College on or before this date entitles a student to a rebate of one-half of fall-term tuition. See Undergraduate Regulations.
+Oct. 1	Th	Applications close for spring 2027 Term Abroad.
+Oct. 16	F	Last day of courses offered in the first half of the fall term.
+Oct. 16	F	Last day to withdraw from a course offered in the first half of the fall term.
+Oct. 16	F	Last day to convert from a letter grade to the Cr/D/F option in a course offered in the first half of the fall term.
+Oct. 19	M	Courses offered in the second half of the fall term begin.
+Oct. 20	T	October recess begins after last academic obligation.
+Oct. 20	T	Midterm.
+Oct. 20	T	Last day to withdraw from a fall full-term course without the course appearing on the transcript.
+Oct. 20	T	Deadline to apply for double credit in a single-credit course.
+Oct. 20	T	Withdrawal from Yale College on or before this date entitles a student to a rebate of one-quarter of the term's tuition.
+Oct. 20	T	Final ABX exam grades are due.
+Oct. 26	M	Classes resume.
+Nov. 12	Th	Last day to withdraw from a course offered in the second half of the fall term without the course appearing on the transcript.
+Nov. 13	F	Spring term registration opens for Graduate School students, 8:00 a.m.
+Nov. 16	M	Spring term registration opens for Class of 2027, 8:00 a.m.
+Nov. 17	T	Spring term registration opens for Class of 2028, 8:00 a.m.
+Nov. 18	W	Spring term registration opens for Class of 2029, 8:00 a.m.
+Nov. 19	Th	Spring term registration opens for Class of 2030, 8:00 a.m.
+Nov. 20	F	November recess begins after last academic obligation.
+Nov. 30	M	Last day to relinquish on-campus housing for the spring term without charge (Undergraduate Regulations).
+Nov. 30	M	Classes resume.
+Dec. 11	F	Classes end; reading period begins.
+Dec. 11	F	Last day to convert from a letter grade to the Cr/D/F option for a full-term course and/or a course offered in the second half of the fall term.
+Dec. 11	F	Last day to withdraw from a full-term course and/or a course offered in the second half of the fall term.
+Dec. 14	M	Graduate School classes end.
+Dec. 15	T	Final examinations begin. No final exams on Saturday, Dec 19 or Sunday, Dec 20.
+Dec. 20	Su	Deadline for all course assignments, other than term papers and term projects. This deadline can be extended only by a Temporary Incomplete (TI) authorized by the student’s residential college dean.
+Dec. 22	T	Spring term registration closes for all GSAS & YC students, 5:00 p.m.
+Dec. 22	T	Final examinations end. Winter recess begins.
+Dec. 22	T	Deadline for all term papers and term projects. This deadline can be extended only by a Temporary Incomplete (TI) authorized by the student’s residential college dean.
+Dec. 22	T	Official degree conferral date for fall 2026. Degree clearance begins once final grades have been submitted.
+Dec. 23	W	Residences close, 12 noon.
+SPRING 2027
+Term CalendarTerm CalendarTerm Calendar
+Date	Day	Description
+Jan. 4	M	Fall-term final grades due.
+Jan. 12	T	Add/drop period opens for all GSAS & YC students, 8:00 a.m.
+Jan. 15	F	Residences open, 9:00 a.m.
+Jan. 15	F	Students in their final term of enrollment must petition for permission to complete the requirements of two majors by this date.
+Jan. 15	F	Students in their final term of enrollment planning to change their major, must by this date, declare as such in Yale Hub.
+Jan. 15	F	Students in their final term of enrollment planning to earn a certificate, must by this date, declare as such in Yale Hub.
+Jan. 18	M	Martin Luther King Jr. Day; classes do not meet.
+Jan. 19	T	Spring-term classes begin.
+Jan. 26	T	Applications close for 2027 Yale Summer Session Programs Abroad.
+Jan. 29	F	Add/drop period closes for all GSAS & YC students, 5:00 p.m.
+Jan. 29	F	Friday classes do not meet; Monday classes meet instead.
+Feb. 2	T	Final deadline to apply for a spring-term Leave of Absence.
+Feb. 2	T	Withdrawal from Yale College on or before this date entitles the student to a full rebate of spring-term tuition (Undergraduate Regulations).
+Feb. 9	T	Last day to withdraw from a course offered in the first half of the spring term without the course appearing on the transcript.
+Feb. 12	F	Withdrawal from Yale College on or before this date entitles a student to a rebate of one-half of spring-term tuition (Undergraduate Regulations).
+Mar. 1	M	Applications close for Non-Yale 2027 Summer Abroad.
+Mar. 3	W	Last day of courses offered in the first half of the spring term.
+Mar. 3	W	Last day to withdraw from a course offered in the first half of the spring term.
+Mar. 3	W	Last day to convert from a letter grade to Cr/D/F option for a course offered in the first half of the spring term.
+Mar. 4	Th	Courses offered in the second half of the spring term begin.
+Mar. 5	F	Midterm.
+Mar. 5	F	Spring recess begins after last academic obligation.
+Mar. 5	F	Last day to withdraw from a spring full-term course without the course appearing on the transcript.
+Mar. 5	F	Deadline to apply for double credit in a single-credit course.
+Mar. 5	F	Withdrawal from Yale College on or before this date entitles a student to a rebate of one-quarter of the term’s tuition (Undergraduate Regulations).
+Mar. 5	F	Final ABX exam grades are due.
+Mar. 22	M	Classes resume.
+Apr. 1	Th	Applications close for fall 2027 Term Abroad or 2027–2028 Year Abroad close.
+Apr. 8	Th	Last day to withdraw from a spring second-half course without the course appearing on the transcript.
+Apr. 9	F	Fall term registration opens for Graduate School students, 8:00 a.m.
+Apr. 12	M	Fall term registration opens for Class of 2028, 8:00 a.m.
+Apr. 13	T	Fall term registration opens for Class of 2029, 8:00 a.m.
+Apr. 14	W	Fall term registration opens for Class of 2030, 8:00 a.m.
+Apr. 30	F	Classes end; reading period begins.
+Apr. 30	F	Last day to convert from a letter grade to Cr/D/F option for a full-term course and/or a course offered in the second half of the spring term.
+Apr. 30	F	Last day to withdraw from a full-term course and/or a course offered in the second half of the spring term.
+May 1	F	Applications for fall-term Leaves of Absence due.
+May 4	T	Graduate school classes end.
+May 5	W	Final examinations begin. No final exams on Saturday, May 8 or Sunday, May 9.
+May 9	Su	Deadline for all course assignments, other than term papers and term projects. This deadline can be extended only by a Temporary Incomplete (TI) authorized by the student’s residential college dean.
+May 12	W	Final examinations end.
+May 12	W	Deadline for all term papers and term projects. This deadline can be extended only by a Temporary Incomplete (TI) authorized by the student’s residential college dean.
+May 13	Th	Residences close for non-seniors, 3 p.m.
+May 14	F	Final grades due for graduating seniors.
+May 19	W	Final grades due for continuing students.
+May 21	F	Registration closes for Yale College and Graduate School students.
+May 24	M	University Commencement.
+May 25	T	Residences close for seniors, 12 noon.

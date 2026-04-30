@@ -1,0 +1,67 @@
+Day	Time	Class	Instructor	Pass Eligibility
+Mondays	7am - 8am	Ride 45(Link is external)	Alicia B.	All Access, Cycling, 1-Week/Trial
+Mondays	5:30pm - 6:30pm	Vinyasa Flow(Link is external)	Prajna K.	All Access, Yoga,
+1-Week/Trial
+Mondays	6pm - 7pm	Ride 45(Link is external)	Danielle U.	All Access, Cycling, 1-Week/Trial
+Mondays	6pm - 7pm	Pumped Up Strength(Link is external)	Emi S.	All Access, GroupX 
+1-Week/Trial
+Mondays	6:30pm - 7:30pm 	Werq(Link is external)	Emily P.	All Access, GroupX 
+1-Week/Trial
+Mondays	7:40pm - 8:40pm	Yoga Sculpt(Link is external)	Macarena F.D.	All Access, Yoga, GroupX
+1-Week/Trial
+Tuesdays	7:30am - 8:30am	Pilates & Stretch(Link is external)	Alicia B.	All Access, Yoga, GroupX
+1-Week/Trial
+Tuesdays	8am - 9am	Ride & Rip(Link is external)	Teni A.	All Access, Cycling, GroupX, 1-Week/Trial
+Tuesdays	4:30pm - 5:30pm	Hatha Yoga(Link is external)	Amy V.	All Access, Yoga,
+1-Week/Trial
+Tuesdays	5pm - 6pm	Yoga Sculpt(Link is external)	Lauren O.	All Access, Yoga, GroupX
+1-Week/Trial
+Tuesdays	5:30pm - 6:30pm	Cardio Dance(Link is external)	Amy V.	All Access, Yoga,
+1-Week/Trial
+Tuesdays	6pm - 7pm	Barre/Stretch Fusion(Link is external)	Sakura G.	All Access, GroupX 
+1-Week/Trial
+Tuesdays	6pm - 7pm	Ride 45(Link is external)	Emma B. 	All Access, Cycling, 1-Week/Trial
+Tuesdays	6:30pm - 7:30pm	Muscular Development(Link is external)	Emi S. 	All Access, GroupX
+1-Week/Trial
+Tuesdays	7pm - 8pm	Vinyasa Flow(Link is external)	Annabelle C. 	All Access, Yoga,
+1-Week/Trial
+Wednesdays	7am - 8am	Ride 45(Link is external)	Emma B.	All Access, Cycling, 1-Week/Trial
+Wednesdays	7:30am - 8:30am	Yoga Sculpt(Link is external)	Lauren O.	All Access, Yoga, GroupX
+1-Week/Trial
+Wednesdays	9am - 10am 	Pilates & Stretch(Link is external)	Inara J.	All Access, Yoga, GroupX
+1-Week/Trial
+Wednesdays	5:30pm - 6:30pm	Vinyasa Flow(Link is external)	Macarena F.D.	All Access, Yoga,
+1-Week/Trial
+Wednesdays	6pm - 7pm	Pumped Up Strength(Link is external)	Emi S.	All Access, GroupX 
+1-Week/Trial
+Thursdays	7:30am - 8:30am	Sculpt(Link is external)	Alicia B.	All Access, Yoga, GroupX
+1-Week/Trial
+Thursdays	4:30am - 5:30am	Hatha Yoga(Link is external)	Amy V. 	All Access, Yoga,
+1-Week/Trial
+Thursdays	5pm - 6pm	HIIT(Link is external)	Ana K.	All Access, GroupX 
+1-Week/Trial
+Thursdays	5:30pm - 6:30pm	Dance 1(Link is external)	Sakura G.	All Access, GroupX 
+1-Week/Trial
+Thursdays	5:30pm - 6:30pm	Biker Bootcamp(Link is external)	Aron E. 	All Access, Cycling, GroupX 1-Week/Trial
+Thursdays	6:30pm - 7:30pm	Bootcamp(Link is external)	Aron E. 	All Access, GroupX 
+1-Week/Trial
+Thursdays	6:30pm - 7:30pm	Vinyasa Flow(Link is external)	Breanna L.	All Access, Yoga,
+1-Week/Trial
+Fridays	7am - 8am	Ride 45(Link is external)	Violet K.	All Access, Cycling, 1-Week/Trial
+Fridays	9:30am - 10:30am	Vinyasa Flow(Link is external)	Breanna L.	All Access, Yoga,
+1-Week/Trial
+Fridays	11am - 12pm	Pilates & Stretch(Link is external)	Alicia B.	All Access, Yoga, GroupX
+1-Week/Trial
+Fridays	4pm - 5pm	Ride & Rip(Link is external)	Teni A.	All Access, Cycling, GroupX, 1-Week/Trial
+Saturdays	10am - 11am 	Sculpt(Link is external)	Rotating Instructor	All Access, Yoga, GroupX
+1-Week/Trial
+Saturdays	10:30am - 11:30am	Werq(Link is external)	Emily P.	All Access, GroupX
+1-Week/Trial
+Sundays	9am - 10am	Pilates & Stretch(Link is external)	Danielle U.	All Access, Yoga, GroupX
+1-Week/Trial
+Sundays	10am - 11am	Ride 45(Link is external)	Danielle U.	All Access, Cycling, 1-Week/Trial
+Sundays	10am - 11am	Vinyasa Flow(Link is external)	Macarena F.D.	All Access, Yoga,
+1-Week/Trial
+Sundays	4pm - 5pm	Ride 45(Link is external)	Kristen T.	All Access, Cycling, 1-Week/Trial
+Sundays	5pm - 6pm 	Sunday Reset Flow(Link is external)	Annabelle C.	All Access, Yoga,
+1-Week/Trial

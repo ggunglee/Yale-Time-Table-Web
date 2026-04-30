@@ -1,0 +1,129 @@
+﻿{
+    "items":  [
+                  {
+                      "id":  "202603|10682",
+                      "courseCode":  "GLBL 5030",
+                      "title":  "History and Global Affairs",
+                      "section":  "01",
+                      "meetingSummary":  "T 1:30-3:25p",
+                      "scheduleType":  "Seminar",
+                      "instructor":  "D. Engerman",
+                      "school":  "Jackson School of Global Affairs",
+                      "termLabel":  "Fall 2026",
+                      "descriptionHtml":  "\u003cp\u003eNobody can understand the present without a keen understanding of the past. After all, history is all we have to go on in providing the resources for making sense of the world we live in. Successful policy makers understand this and turn historical sensibility to their advantage in interpreting the present. They understand how good policy is grounded in sound historical thinking. The purpose of the core requirement is to introduce advanced students of global affairs to the manifold ways in which history is discussed and perceived today. Different from the social sciences, history as a discipline is less about prediction and more about finding out where we come from and what challenges the past has bequeathed to us. It is also about grasping, in a critical fashion, that we know the future only by the past we project into it.\u003c/p\u003e",
+                      "descriptionText":  "Nobody can understand the present without a keen understanding of the past. After all, history is all we have to go on in providing the resources for making sense of the world we live in. Successful policy makers understand this and turn historical sensibility to their advantage in interpreting the present. They understand how good policy is grounded in sound historical thinking. The purpose of the core requirement is to introduce advanced students of global affairs to the manifold ways in which history is discussed and perceived today. Different from the social sciences, history as a discipline is less about prediction and more about finding out where we come from and what challenges the past has bequeathed to us. It is also about grasping, in a critical fashion, that we know the future only by the past we project into it.",
+                      "attributesHtml":  "",
+                      "instructorHtml":  "\u003cdiv class=\"instructor-detail\"\u003e\u003cdiv class=\"instructor-name\"\u003e\u003ca href=\"#\" data-action=\"search\" data-search-data-provider=\"search-by-instructor\" data-id=\"15994\"\u003eDavid Engerman\u003c/a\u003e\u003c/div\u003e\u003cdiv class=\"instructor-email\"\u003e\u003ca href=\"mailto:david.engerman@yale.edu\"\u003edavid.engerman@yale.edu\u003c/a\u003e\u003c/div\u003e\u003c/div\u003e",
+                      "meetingHtml":  "\u003cdiv class=\"meet\"\u003eT 1:30pm-3:25pm\u003c/div\u003e",
+                      "syllabusStatus":  "missing",
+                      "syllabusLabel":  "missing",
+                      "syllabusUrl":  null,
+                      "finalExam":  "",
+                      "linkedSections":  [
+                                             {
+                                                 "crn":  "10682",
+                                                 "section":  "01",
+                                                 "title":  "History and Global Affairs",
+                                                 "scheduleType":  "Seminar",
+                                                 "meetingSummary":  "T 1:30-3:25p"
+                                             }
+                                         ],
+                      "updatedAt":  "2026-04-22T01:27:49.7962365+09:00"
+                  },
+                  {
+                      "id":  "202603|10914",
+                      "courseCode":  "PLSC 1327",
+                      "title":  "Introduction to Political Philosophy",
+                      "section":  "01",
+                      "meetingSummary":  "MW 11:35a-12:25p",
+                      "scheduleType":  "Lecture",
+                      "instructor":  "G. Oskian",
+                      "school":  "Yale College",
+                      "termLabel":  "Fall 2026",
+                      "descriptionHtml":  "\u003cp\u003eFundamental issues in contemporary politics investigated through reflection on classic texts in the history of political thought. Emphasis on topics linked to modern constitutional democracies, including executive power, representation, and political parties. Readings from Plato, Machiavelli, Hobbes, Locke, Rousseau, Madison and Hamilton, Lincoln, and Tocqueville, in addition to recent articles on contemporary issues.\u003c/p\u003e",
+                      "descriptionText":  "Fundamental issues in contemporary politics investigated through reflection on classic texts in the history of political thought. Emphasis on topics linked to modern constitutional democracies, including executive power, representation, and political parties. Readings from Plato, Machiavelli, Hobbes, Locke, Rousseau, Madison and Hamilton, Lincoln, and Tocqueville, in addition to recent articles on contemporary issues.",
+                      "attributesHtml":  "\u003cul\u003e\u003cli\u003e\u003ca href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEPP\"\u003eYC EP\u0026amp;E Intro Political Phil\u003c/a\u003e\u003c/li\u003e\u003cli\u003e\u003ca href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPS1\"\u003eYC PLSC Intro Courses\u003c/a\u003e\u003c/li\u003e\u003cli\u003e\u003ca href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSP\"\u003eYC PLSC Political Philosophy\u003c/a\u003e\u003c/li\u003e\u003c/ul\u003e",
+                      "instructorHtml":  "\u003cdiv class=\"instructor-detail\"\u003e\u003cdiv class=\"instructor-name\"\u003e\u003ca href=\"#\" data-action=\"search\" data-search-data-provider=\"search-by-instructor\" data-id=\"15099\"\u003eGiulia Oskian\u003c/a\u003e\u003c/div\u003e\u003cdiv class=\"instructor-email\"\u003e\u003ca href=\"mailto:giulia.oskian@yale.edu\"\u003egiulia.oskian@yale.edu\u003c/a\u003e\u003c/div\u003e\u003c/div\u003e",
+                      "meetingHtml":  "\u003cdiv class=\"meet\"\u003eMW 11:35am-12:25pm\u003c/div\u003e\n\u003cdiv class=\"meet\"\u003eHTBA\u003c/div\u003e",
+                      "syllabusStatus":  "missing",
+                      "syllabusLabel":  "missing",
+                      "syllabusUrl":  null,
+                      "finalExam":  "HTBA",
+                      "linkedSections":  [
+                                             {
+                                                 "crn":  "10914",
+                                                 "section":  "01",
+                                                 "title":  "Introduction to Political Philosophy",
+                                                 "scheduleType":  "Lecture",
+                                                 "meetingSummary":  "MW 11:35a-12:25p"
+                                             },
+                                             {
+                                                 "crn":  "14175",
+                                                 "section":  "A",
+                                                 "title":  "Intro to Political Philosophy: WRITING REQUISITE SECTION",
+                                                 "scheduleType":  "Discussion/Lab",
+                                                 "meetingSummary":  "Th 2:35-3:25p"
+                                             },
+                                             {
+                                                 "crn":  "14176",
+                                                 "section":  "B",
+                                                 "title":  "Introduction to Political Philosophy",
+                                                 "scheduleType":  "Discussion/Lab",
+                                                 "meetingSummary":  "Th 10:30-11:20a"
+                                             },
+                                             {
+                                                 "crn":  "14177",
+                                                 "section":  "C",
+                                                 "title":  "Introduction to Political Philosophy",
+                                                 "scheduleType":  "Discussion/Lab",
+                                                 "meetingSummary":  "Th 11:35a-12:25p"
+                                             },
+                                             {
+                                                 "crn":  "14485",
+                                                 "section":  "E",
+                                                 "title":  "Introduction to Political Philosophy",
+                                                 "scheduleType":  "Discussion/Lab",
+                                                 "meetingSummary":  "Th 4-4:50p"
+                                             },
+                                             {
+                                                 "crn":  "14489",
+                                                 "section":  "F",
+                                                 "title":  "Introduction to Political Philosophy",
+                                                 "scheduleType":  "Discussion/Lab",
+                                                 "meetingSummary":  "Th 8-8:50p"
+                                             }
+                                         ],
+                      "updatedAt":  "2026-04-22T15:13:25.1339919+09:00"
+                  },
+                  {
+                      "id":  "202603|10685",
+                      "courseCode":  "GLBL 7560",
+                      "title":  "Democracy and Distribution",
+                      "section":  "01",
+                      "meetingSummary":  "W 9:25-11:20a",
+                      "scheduleType":  "Seminar",
+                      "instructor":  "I. Shapiro",
+                      "school":  "Jackson School of Global Affairs",
+                      "termLabel":  "",
+                      "descriptionHtml":  "\u003cp\u003eAn examination of relations between democracy and the distribution of income and wealth. The central focus is on ways in which different groups and coalitions affect, and are affected by, democratic distributive politics. This course also examines the variation among democracies in the provision of education, social and health insurance, and policies designed to ameliorate inequalities.\u003c/p\u003e",
+                      "descriptionText":  "An examination of relations between democracy and the distribution of income and wealth. The central focus is on ways in which different groups and coalitions affect, and are affected by, democratic distributive politics. This course also examines the variation among democracies in the provision of education, social and health insurance, and policies designed to ameliorate inequalities.",
+                      "attributesHtml":  "\u003cul\u003e\u003cli\u003e\u003ca href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_GBEL\"\u003eGB Elective\u003c/a\u003e\u003c/li\u003e\u003cli\u003e\u003ca href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSI\"\u003eYC PLSC Internatl Relations\u003c/a\u003e\u003c/li\u003e\u003cli\u003e\u003ca href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPST\"\u003eYC PLSC Analyt Pol Theory\u003c/a\u003e\u003c/li\u003e\u003c/ul\u003e",
+                      "instructorHtml":  "\u003cdiv class=\"instructor-detail\"\u003e\u003cdiv class=\"instructor-name\"\u003e\u003ca href=\"#\" data-action=\"search\" data-search-data-provider=\"search-by-instructor\" data-id=\"2396\"\u003eIan Shapiro\u003c/a\u003e\u003c/div\u003e\u003cdiv class=\"instructor-email\"\u003e\u003ca href=\"mailto:ian.shapiro@yale.edu\"\u003eian.shapiro@yale.edu\u003c/a\u003e\u003c/div\u003e\u003c/div\u003e",
+                      "meetingHtml":  "\u003cdiv class=\"meet\"\u003eW 9:25am-11:20am\u003c/div\u003e",
+                      "syllabusStatus":  "available",
+                      "syllabusLabel":  "available",
+                      "syllabusUrl":  "https://yale.instructure.com/courses/118924/assignments/syllabus",
+                      "finalExam":  "",
+                      "linkedSections":  [
+                                             {
+                                                 "crn":  "10685",
+                                                 "section":  "01",
+                                                 "title":  "Democracy and Distribution",
+                                                 "scheduleType":  "Seminar",
+                                                 "meetingSummary":  "W 9:25-11:20a"
+                                             }
+                                         ],
+                      "updatedAt":  "2026-04-22T15:13:35.8839079+09:00"
+                  }
+              ]
+}
