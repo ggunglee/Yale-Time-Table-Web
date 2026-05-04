@@ -242,6 +242,35 @@ h1 {
   justify-content: flex-start;
 }
 
+.plan-action-group {
+  margin-bottom: 12px;
+}
+
+.plan-action-group .wide-button {
+  margin-bottom: 6px;
+}
+
+.helper-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.advanced-actions {
+  margin: 2px 0 14px;
+}
+
+.advanced-actions summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.advanced-actions[open] summary {
+  margin-bottom: 10px;
+}
+
 .chip-button {
   padding: 8px 12px;
   border-radius: 999px;

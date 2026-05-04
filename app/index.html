@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yale Planner</title>
-  <link rel="stylesheet" href="/styles.css?v=planner-local-cache-v5">
+  <link rel="stylesheet" href="/styles.css?v=planner-actions-v6">
 </head>
 <body>
   <div class="shell">
@@ -121,16 +121,26 @@
         <section class="panel">
           <div class="panel-head">
             <h2>Plans</h2>
+          </div>
+          <input id="import-plans-input" type="file" accept="application/json" hidden>
+          <div class="plan-action-group">
             <div class="mini-actions">
               <button id="new-plan-btn" class="chip-button">New</button>
               <button id="duplicate-plan-btn" class="chip-button">Duplicate</button>
-              <button id="export-plans-btn" class="chip-button">Export</button>
-              <button id="export-json-btn" class="chip-button">Backup JSON</button>
-              <button id="import-plans-btn" class="chip-button">Load JSON</button>
               <button id="delete-plan-btn" class="chip-button danger">Delete</button>
             </div>
           </div>
-          <input id="import-plans-input" type="file" accept="application/json" hidden>
+          <div class="plan-action-group">
+            <button id="export-plans-btn" class="wide-button">Download calendar file (.ics)</button>
+            <p class="muted helper-text">Import this file into Google Calendar, Apple Calendar, or Outlook.</p>
+          </div>
+          <details class="advanced-actions">
+            <summary>Advanced backup</summary>
+            <div class="mini-actions">
+              <button id="export-json-btn" class="chip-button">Download plan backup</button>
+              <button id="import-plans-btn" class="chip-button">Restore plan backup</button>
+            </div>
+          </details>
           <div class="field-group">
             <label for="plan-select">Current plan / load saved plan</label>
             <select id="plan-select"></select>
@@ -213,6 +223,6 @@
     </div>
   </template>
 
-  <script src="/app.js?v=planner-local-cache-v5"></script>
+  <script src="/app.js?v=planner-actions-v6"></script>
 </body>
 </html>

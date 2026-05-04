@@ -248,6 +248,15 @@ function normalizeStaticCopy() {
   if (els.refreshPwgBtn) {
     els.refreshPwgBtn.textContent = "Refresh PWG";
   }
+  if (els.exportPlansBtn) {
+    els.exportPlansBtn.textContent = "Download calendar file (.ics)";
+  }
+  if (els.exportJsonBtn) {
+    els.exportJsonBtn.textContent = "Download plan backup";
+  }
+  if (els.importPlansBtn) {
+    els.importPlansBtn.textContent = "Restore plan backup";
+  }
 }
 
 function renderMeta() {
@@ -278,7 +287,7 @@ function renderPlanControls() {
   els.planSelect.value = currentPlan.id;
   els.planNameInput.value = currentPlan.name;
   if (currentPlan.isStartupDraft) {
-    els.planSummary.textContent = "Each launch starts from Plan A. Use this menu or Load JSON if you want to bring in an older plan.";
+    els.planSummary.textContent = "Each launch starts from Plan A. Saved plans stay in this browser.";
     return;
   }
   els.planSummary.textContent = `${currentPlan.items.length} items saved in this candidate schedule.`;
