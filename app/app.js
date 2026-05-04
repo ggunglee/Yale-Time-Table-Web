@@ -532,6 +532,7 @@ function addItemToCurrentPlan(kind, id) {
   persistLocalState();
   syncResultActionStates();
   renderWorkspace();
+  focusSelectedPanel();
 }
 
 function removeItemFromCurrentPlan(kind, id) {
@@ -820,6 +821,13 @@ function renderPanelState() {
     toggle.setAttribute("aria-expanded", `${isOpen}`);
     body.classList.toggle("is-collapsed", !isOpen);
   });
+}
+
+function focusSelectedPanel() {
+  UI_STATE.panels.course = false;
+  UI_STATE.panels.pwg = false;
+  UI_STATE.panels.selected = true;
+  renderPanelState();
 }
 
 function togglePanel(key) {
@@ -1479,6 +1487,7 @@ function bindEvents() {
     }
     if (action === "remove-plan-item") {
       removeItemFromCurrentPlan(button.dataset.kind || "course", button.dataset.id);
+      focusSelectedPanel();
       return;
     }
     if (action === "detail-course") {
@@ -1510,6 +1519,7 @@ function bindEvents() {
     }
     if (button.dataset.action === "remove-plan-item") {
       removeItemFromCurrentPlan(button.dataset.kind || "pwg", button.dataset.id);
+      focusSelectedPanel();
     }
   });
 
