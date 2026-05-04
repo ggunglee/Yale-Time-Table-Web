@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yale Planner</title>
-  <link rel="stylesheet" href="/styles.css?v=planner-panel-flow-v7">
+  <link rel="stylesheet" href="/styles.css?v=planner-i18n-v8">
 </head>
 <body>
   <div class="shell">
@@ -13,13 +13,13 @@
         <p class="eyebrow">Academic Schedule Builder</p>
         <div class="brand-mark">
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOQAAADkCAMAAAC/iXi/AAAAM1BMVEUANWuAmrUgTn5ggaNAaJD////AzdqgtMjQ2uTg5u2Qp7/w8/awwNFwjqwQQnQwW4dQdJl1Ai+JAAAD50lEQVR4AezPBQGAQBAAsNfrH5kG+KNbg6UnAAAAAAAAAMinKWlRzYe0tFM/TUuLoh+SJSUlJSfqzGiLURAGogFYUBHw/7923+muoBPa4b63nnj0ThyWGdLEsMHz7SHEoQg5wsurpRCi8YJgvTn3VxcPR/ZWnlG8MyENX2KLzosWNT+8yfuBXNy6c2DQ01lRxh7jNzhWgXHn/TNqrMygmDQ2YhEVbLwZscgs7IACtzr/ekeRmeTUmfGYf73kZTI1IYn4nPwp7SLTKfeeDcpX+0ivKDD4lE40McCM6N29IRXRwyZgxpnvpRE9IjojwPXnDita+DaeinwRc7tuiRZNTCYrXyV8I0Zc87+XoABGaNlFhx3dM/CQviHPeCf2Il8nzI6RkvCXAKXO3mAjrjOcY26MVD2zApQ0dYUN+Iox3T2o7i9V6wBsE2NkV71nAH7eCmuUn36AOCtGSup7jMI9Ue/uGfklZs4KW/Wtg7BPiZHQtw6Ne5zOnwb5NeddjBSVx6PKr7FJPUZyfw9mck+yuLLbKOJzz4kv/k4YuHRjxLJZp//5vKH/VoUDqxkjvr82UbgH8sZOaJ3+ucGBxEcWHpxWE1JS/42mdE94Hx9emKg6MWLnWwfhUGlCwoB1WD+f87v4yMKGU4iRrX0A6NjgJsQB1mH4fK7Pn/hTGIlgjBjsK43APdfT+DDCSYaakBO1DoF7zLNX2gsrHmhCNl7rNJyvY8QBxwJM1Z0fl5YRZszLGDGtpajZXzUhtp83y7injO0RQdgJL2LEA9bhq+7syI0xwo95XKg7RusA1Z3v/8DJClwPmxDDaR3APbm3QFRZg/ooRiJQRbNWd+0UnrCgwz+f7d2z7WQd3PAK65itA7jn+n98VFmJOhgjhvpYAKnuTBsfhNYB3NMOEzsZyk4eaEIq8WEkXt35f+nJy3r4boxcBNZBib0mZOe3DlTd7aWNDyNrYm5jpCT+YwGwuks28lsHdw9wLEB8bAAclKxb3fFbB3cPv3Xw6o7fOmB11xBkdUJ/SCurY9e3Du4e/mMBuLprKp91cQtYByfwWwenLmAdnKPfaa1PScAbuX5197d9uzoMK4aCKBjB1WPov9q4ADNLntPB/O+2fwMFCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCTkccvkLyCjjI8caoceTrcMg1+EfPi/8C7drCGPdYnjlES+03b0Tc4uXW8+uiVO8qqX0KjxLi1e3lLM/4XW0eFvbdPfDO+uxtnhfLd3598quWmtJaWpzfLi5rSnVh36bt8UXlCAhISEhfwQpSZIkSZIkSZKk/8Y6mpN1kbwbAAAAAElFTkSuQmCC" alt="Yale logo" class="brand-logo">
-          <h1>YALE PLANNER</h1>
+          <h1>Yale Planner</h1>
         </div>
         <p class="subtitle">Courses, PWG classes, and weekly schedule planning in one place.</p>
       </div>
       <div class="topbar-actions">
-        <button id="refresh-courses-btn" class="action-button">강의 정보 업데이트 확인</button>
-        <button id="refresh-pwg-btn" class="action-button action-button-secondary">PWG 시간표 업데이트 확인</button>
+        <button id="refresh-courses-btn" class="action-button">Fetch course info</button>
+        <button id="refresh-pwg-btn" class="action-button action-button-secondary">Fetch PWG info</button>
       </div>
     </header>
 
@@ -211,7 +211,7 @@
           <p id="detail-kicker" class="eyebrow"></p>
           <h3 id="detail-title"></h3>
         </div>
-        <button id="detail-close-btn" class="icon-button" aria-label="Close details">×</button>
+        <button id="detail-close-btn" class="icon-button" aria-label="Close details">?</button>
       </div>
       <div id="detail-body" class="detail-body"></div>
     </div>
@@ -223,6 +223,6 @@
     </div>
   </template>
 
-  <script src="/app.js?v=planner-panel-flow-v7"></script>
+  <script src="/app.js?v=planner-i18n-v8"></script>
 </body>
 </html>

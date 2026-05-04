@@ -1,5 +1,194 @@
 const STORAGE_KEY = "yale-semester-planner:v1";
 const DATA_STORAGE_KEY = "yale-semester-planner:data:v1";
+const TRANSLATIONS = {
+  en: {
+    appTitle: "Yale Planner",
+    eyebrow: "Academic Schedule Builder",
+    subtitle: "Courses, PWG classes, and weekly schedule planning in one place.",
+    refreshCourses: "Fetch course info",
+    refreshPwg: "Fetch PWG info",
+    courseSearch: "Course Search",
+    pwgSearch: "PWG Course Search",
+    plans: "Plans",
+    year: "Year",
+    semester: "Semester",
+    school: "School / division",
+    subject: "Subject",
+    keyword: "Keyword",
+    keywordClass: "Keyword / class name",
+    day: "Day",
+    earliestStart: "Earliest start",
+    latestEnd: "Latest end",
+    search: "Search",
+    new: "New",
+    duplicate: "Duplicate",
+    delete: "Delete",
+    downloadCalendar: "Download calendar file (.ics)",
+    calendarHelp: "Import this file into Google Calendar, Apple Calendar, or Outlook.",
+    advancedBackup: "Advanced backup",
+    downloadBackup: "Download plan backup",
+    restoreBackup: "Restore plan backup",
+    currentPlan: "Current plan / load saved plan",
+    planName: "Plan name",
+    selectedItems: "Selected Items",
+    weeklySchedule: "Weekly Schedule",
+    academicCalendar: "Academic Calendar",
+    course: "Course",
+    pwg: "PWG",
+    conflict: "Conflict",
+    noResults: "No results yet.",
+    noCache: "No cache",
+    noCalendar: "No calendar",
+    cached: "cached",
+    events: "events",
+    startupSummary: "Each launch starts from Plan A. Saved plans stay in this browser.",
+    savedSummary: "{count} items saved in this candidate schedule.",
+    noCalendarItems: "Academic calendar will appear here once events are available.",
+    noCourses: "No course matches found. If needed, use Fetch course info first.",
+    noPwg: "No PWG classes match the filters.",
+    stillMissing: "Still missing a course?",
+    cantFind: "Can't find it?",
+    findMore: "Find More",
+    add: "Add",
+    addToPlan: "Add to plan",
+    remove: "Remove",
+    details: "Details",
+    syllabus: "syllabus",
+    syllabusAvailable: "available",
+    syllabusMissing: "missing",
+    syllabusUnknown: "needs checking",
+    checkingCourses: "Checking Yale Courses...",
+    checkingPwg: "Checking PWG...",
+    fetching: "Fetching...",
+    courseUpdated: "Course cache updated for {query}. {count} item(s) fetched.",
+    noCacheChanges: "No cache changes were detected for {query}.",
+    courseRefreshFailed: "Course refresh failed: {message}",
+    pwgRefreshFailed: "PWG refresh failed: {message}",
+    noCourseRemote: "No matching courses were found in Yale Course Search for this query.",
+    addBeforeExport: "Add at least one class or PWG item before exporting.",
+    noExportMeetings: "This plan does not contain any exportable scheduled meetings yet.",
+    backupImported: "Plans imported successfully.",
+    importFailed: "Import failed: {message}",
+    importMissingPlans: "Imported file does not contain any plans.",
+    detailKicker: "Yale Course Detail",
+    loading: "Loading...",
+    fetchingDetail: "Fetching cached detail and syllabus status...",
+    detailUnavailable: "Detail unavailable",
+    openSyllabus: "Open syllabus",
+    syllabusStatus: "Syllabus status: {status}",
+    linkedSections: "Linked / alternate sections",
+    description: "Description",
+    noDescription: "No description available.",
+    finalExam: "Final Exam",
+    schoolDetail: "School: {school} • {term} • {type}",
+    meetingDetail: "Meeting: {meeting} • Instructor: {instructor}",
+    staff: "Staff",
+    current: "Current",
+    saved: "Saved",
+    earliest: "Earliest",
+    latest: "Latest",
+    scheduledBlocks: "scheduled blocks",
+    selectedItemCount: "selected items",
+  },
+  ko: {
+    appTitle: "예일대 에브리타임",
+    eyebrow: "학업 시간표 만들기",
+    subtitle: "강의, PWG 강의, 주간 시간표를 한곳에서 관리하세요.",
+    refreshCourses: "강의 정보 가져오기",
+    refreshPwg: "PWG 정보 가져오기",
+    courseSearch: "강의 검색",
+    pwgSearch: "PWG 강의 검색",
+    plans: "계획표",
+    year: "연도",
+    semester: "학기",
+    school: "학교 / 구분",
+    subject: "과목 코드",
+    keyword: "키워드",
+    keywordClass: "키워드 / 강의명",
+    day: "요일",
+    earliestStart: "가장 이른 시작",
+    latestEnd: "가장 늦은 종료",
+    search: "검색",
+    new: "새 계획표",
+    duplicate: "복제",
+    delete: "삭제",
+    downloadCalendar: "캘린더 파일(.ics) 다운로드",
+    calendarHelp: "Google Calendar, Apple Calendar, Outlook에 가져올 수 있습니다.",
+    advancedBackup: "고급 백업",
+    downloadBackup: "계획표 백업 다운로드",
+    restoreBackup: "계획표 백업 불러오기",
+    currentPlan: "현재 계획표 / 저장된 계획표",
+    planName: "계획표 이름",
+    selectedItems: "선택한 항목",
+    weeklySchedule: "주간 시간표",
+    academicCalendar: "학사 일정",
+    course: "강의",
+    pwg: "PWG",
+    conflict: "겹침",
+    noResults: "아직 결과가 없습니다.",
+    noCache: "저장된 정보 없음",
+    noCalendar: "일정 없음",
+    cached: "개 저장됨",
+    events: "개 일정",
+    startupSummary: "처음에는 Plan A로 시작합니다. 저장한 계획표는 이 브라우저에 남습니다.",
+    savedSummary: "{count}개 항목이 이 계획표에 저장되었습니다.",
+    noCalendarItems: "학사 일정이 준비되면 여기에 표시됩니다.",
+    noCourses: "일치하는 강의가 없습니다. 필요하면 강의 정보 가져오기를 눌러주세요.",
+    noPwg: "조건에 맞는 PWG 강의가 없습니다.",
+    stillMissing: "아직 강의가 안 보이나요?",
+    cantFind: "찾는 강의가 없나요?",
+    findMore: "더 찾아보기",
+    add: "추가",
+    addToPlan: "계획표에 추가",
+    remove: "삭제",
+    details: "상세",
+    syllabus: "실라버스",
+    syllabusAvailable: "있음",
+    syllabusMissing: "없음",
+    syllabusUnknown: "확인 필요",
+    checkingCourses: "예일 강의 정보를 확인하는 중...",
+    checkingPwg: "PWG 정보를 확인하는 중...",
+    fetching: "가져오는 중...",
+    courseUpdated: "{query} 강의 정보를 업데이트했습니다. {count}개를 가져왔습니다.",
+    noCacheChanges: "{query}에 대한 변경 사항이 없습니다.",
+    courseRefreshFailed: "강의 정보 가져오기 실패: {message}",
+    pwgRefreshFailed: "PWG 정보 가져오기 실패: {message}",
+    noCourseRemote: "이 검색 조건에 맞는 강의를 Yale Course Search에서 찾지 못했습니다.",
+    addBeforeExport: "내보내기 전에 강의나 PWG 항목을 하나 이상 추가해주세요.",
+    noExportMeetings: "이 계획표에는 캘린더로 내보낼 수 있는 시간이 없습니다.",
+    backupImported: "계획표를 불러왔습니다.",
+    importFailed: "불러오기 실패: {message}",
+    importMissingPlans: "불러온 파일에 계획표가 없습니다.",
+    detailKicker: "예일 강의 상세",
+    loading: "불러오는 중...",
+    fetchingDetail: "저장된 상세 정보와 실라버스 상태를 확인하는 중...",
+    detailUnavailable: "상세 정보를 볼 수 없습니다",
+    openSyllabus: "실라버스 열기",
+    syllabusStatus: "실라버스 상태: {status}",
+    linkedSections: "연결 / 대체 섹션",
+    description: "설명",
+    noDescription: "등록된 설명이 없습니다.",
+    finalExam: "기말 시험",
+    schoolDetail: "구분: {school} • {term} • {type}",
+    meetingDetail: "시간: {meeting} • 교수: {instructor}",
+    staff: "미정",
+    current: "현재",
+    saved: "저장됨",
+    earliest: "가장 빠름",
+    latest: "가장 늦음",
+    scheduledBlocks: "개 시간 블록",
+    selectedItemCount: "개 선택",
+  },
+  ja: { appTitle: "イェール時間割", courseSearch: "授業検索", pwgSearch: "PWG授業検索", plans: "計画表", refreshCourses: "授業情報を取得", refreshPwg: "PWG情報を取得", search: "検索", add: "追加", addToPlan: "計画表に追加", remove: "削除", details: "詳細", syllabusUnknown: "確認が必要" },
+  zh: { appTitle: "耶鲁课表", courseSearch: "课程搜索", pwgSearch: "PWG课程搜索", plans: "计划表", refreshCourses: "获取课程信息", refreshPwg: "获取PWG信息", search: "搜索", add: "添加", addToPlan: "添加到计划", remove: "删除", details: "详情", syllabusUnknown: "需要确认" },
+  hi: { appTitle: "येल प्लानर", courseSearch: "कोर्स खोज", pwgSearch: "PWG क्लास खोज", plans: "योजनाएं", refreshCourses: "कोर्स जानकारी लाएं", refreshPwg: "PWG जानकारी लाएं", search: "खोजें", add: "जोड़ें", addToPlan: "योजना में जोड़ें", remove: "हटाएं", details: "विवरण", syllabusUnknown: "जांच आवश्यक" },
+  ur: { appTitle: "ییل پلانر", courseSearch: "کورس تلاش", pwgSearch: "PWG کلاس تلاش", plans: "منصوبے", refreshCourses: "کورس معلومات لائیں", refreshPwg: "PWG معلومات لائیں", search: "تلاش", add: "شامل کریں", addToPlan: "منصوبے میں شامل کریں", remove: "ہٹائیں", details: "تفصیل", syllabusUnknown: "تصدیق ضروری" },
+  ar: { appTitle: "مخطط ييل", courseSearch: "بحث المقررات", pwgSearch: "بحث صفوف PWG", plans: "الخطط", refreshCourses: "جلب معلومات المقررات", refreshPwg: "جلب معلومات PWG", search: "بحث", add: "إضافة", addToPlan: "إضافة إلى الخطة", remove: "إزالة", details: "التفاصيل", syllabusUnknown: "يحتاج إلى تحقق" },
+  fr: { appTitle: "Planificateur Yale", courseSearch: "Recherche de cours", pwgSearch: "Recherche de cours PWG", plans: "Plannings", refreshCourses: "Récupérer les cours", refreshPwg: "Récupérer PWG", search: "Rechercher", add: "Ajouter", addToPlan: "Ajouter au planning", remove: "Supprimer", details: "Détails", syllabusUnknown: "à vérifier" },
+  es: { appTitle: "Planificador Yale", courseSearch: "Buscar cursos", pwgSearch: "Buscar clases PWG", plans: "Planes", refreshCourses: "Obtener cursos", refreshPwg: "Obtener PWG", search: "Buscar", add: "Añadir", addToPlan: "Añadir al plan", remove: "Quitar", details: "Detalles", syllabusUnknown: "requiere revisión" },
+};
+const SUPPORTED_LOCALES = Object.keys(TRANSLATIONS);
+const CURRENT_LOCALE = resolveLocale();
 const PX_PER_MINUTE = 2;
 const DAY_KEYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const DAY_START_MINUTES = 7 * 60;
@@ -80,6 +269,29 @@ const els = {
   detailCloseBtn: document.getElementById("detail-close-btn"),
   emptyStateTemplate: document.getElementById("empty-state-template"),
 };
+
+function resolveLocale() {
+  const candidates = [navigator.language, ...(navigator.languages || [])]
+    .filter(Boolean)
+    .map((value) => value.toLowerCase());
+  for (const candidate of candidates) {
+    if (candidate.startsWith("zh")) return "zh";
+    if (candidate.startsWith("ur")) return "ur";
+    const base = candidate.split("-")[0];
+    if (SUPPORTED_LOCALES.includes(base)) return base;
+  }
+  return "en";
+}
+
+function t(key, values = {}) {
+  const template = TRANSLATIONS[CURRENT_LOCALE]?.[key] || TRANSLATIONS.en[key] || key;
+  return template.replace(/\{(\w+)\}/g, (_, name) => `${values[name] ?? ""}`);
+}
+
+function setText(selector, key) {
+  const node = document.querySelector(selector);
+  if (node) node.textContent = t(key);
+}
 
 function defaultPlan(name = "New Plan", options = {}) {
   return {
@@ -241,22 +453,47 @@ function setButtonBusy(button, isBusy, busyText) {
 }
 
 function normalizeStaticCopy() {
-  document.title = "Yale Planner";
-  if (els.refreshCoursesBtn) {
-    els.refreshCoursesBtn.textContent = "Refresh Courses";
-  }
-  if (els.refreshPwgBtn) {
-    els.refreshPwgBtn.textContent = "Refresh PWG";
-  }
-  if (els.exportPlansBtn) {
-    els.exportPlansBtn.textContent = "Download calendar file (.ics)";
-  }
-  if (els.exportJsonBtn) {
-    els.exportJsonBtn.textContent = "Download plan backup";
-  }
-  if (els.importPlansBtn) {
-    els.importPlansBtn.textContent = "Restore plan backup";
-  }
+  document.documentElement.lang = CURRENT_LOCALE;
+  document.documentElement.dir = ["ar", "ur"].includes(CURRENT_LOCALE) ? "rtl" : "ltr";
+  document.title = t("appTitle");
+  setText(".eyebrow", "eyebrow");
+  setText(".brand-mark h1", "appTitle");
+  setText(".subtitle", "subtitle");
+  setText("#refresh-courses-btn", "refreshCourses");
+  setText("#refresh-pwg-btn", "refreshPwg");
+  setText("#course-panel-toggle span", "courseSearch");
+  setText("#pwg-panel-toggle span", "pwgSearch");
+  setText(".sidebar .panel:nth-of-type(3) .panel-head h2", "plans");
+  setText("label[for='course-year']", "year");
+  setText("label[for='course-semester']", "semester");
+  setText("label[for='course-school']", "school");
+  setText("label[for='course-subject']", "subject");
+  setText("label[for='course-keyword']", "keyword");
+  setText("label[for='pwg-keyword']", "keywordClass");
+  setText("label[for='pwg-day']", "day");
+  setText("label[for='pwg-start']", "earliestStart");
+  setText("label[for='pwg-end']", "latestEnd");
+  setText("#course-search-btn", "search");
+  setText("#pwg-search-btn", "search");
+  setText("#new-plan-btn", "new");
+  setText("#duplicate-plan-btn", "duplicate");
+  setText("#delete-plan-btn", "delete");
+  setText("#export-plans-btn", "downloadCalendar");
+  setText(".helper-text", "calendarHelp");
+  setText(".advanced-actions summary", "advancedBackup");
+  setText("#export-json-btn", "downloadBackup");
+  setText("#import-plans-btn", "restoreBackup");
+  setText("label[for='plan-select']", "currentPlan");
+  setText("label[for='plan-name-input']", "planName");
+  setText("#selected-panel-toggle span", "selectedItems");
+  setText(".timeline-panel .panel-head h2", "weeklySchedule");
+  setText(".calendar-panel .panel-head h2", "academicCalendar");
+  const legendLabels = document.querySelectorAll(".legend span");
+  if (legendLabels[0]) legendLabels[0].lastChild.textContent = t("course");
+  if (legendLabels[1]) legendLabels[1].lastChild.textContent = t("pwg");
+  if (legendLabels[2]) legendLabels[2].lastChild.textContent = t("conflict");
+  const emptyTemplateText = els.emptyStateTemplate?.content?.querySelector("p");
+  if (emptyTemplateText) emptyTemplateText.textContent = t("noResults");
 }
 
 function renderMeta() {
@@ -265,14 +502,14 @@ function renderMeta() {
   const calendarMeta = state.data.calendar?.metadata;
 
   els.courseCacheMeta.textContent = courseMeta
-    ? `${courseMeta.itemCount} cached • ${formatTimestamp(courseMeta.lastUpdated)}`
-    : "No cache";
+    ? `${courseMeta.itemCount} ${t("cached")} • ${formatTimestamp(courseMeta.lastUpdated)}`
+    : t("noCache");
   els.pwgCacheMeta.textContent = pwgMeta
     ? `${pwgMeta.currentTerm || "Seed"} • ${formatTimestamp(pwgMeta.lastUpdated)}`
-    : "No cache";
+    : t("noCache");
   els.calendarMeta.textContent = calendarMeta
-    ? `${calendarMeta.eventCount} events • ${formatTimestamp(calendarMeta.lastUpdated)}`
-    : "No calendar";
+    ? `${calendarMeta.eventCount} ${t("events")} • ${formatTimestamp(calendarMeta.lastUpdated)}`
+    : t("noCalendar");
 }
 
 function renderPlanControls() {
@@ -287,10 +524,10 @@ function renderPlanControls() {
   els.planSelect.value = currentPlan.id;
   els.planNameInput.value = currentPlan.name;
   if (currentPlan.isStartupDraft) {
-    els.planSummary.textContent = "Each launch starts from Plan A. Saved plans stay in this browser.";
+    els.planSummary.textContent = t("startupSummary");
     return;
   }
-  els.planSummary.textContent = `${currentPlan.items.length} items saved in this candidate schedule.`;
+  els.planSummary.textContent = t("savedSummary", { count: currentPlan.items.length });
 }
 
 function renderCalendar() {
@@ -299,7 +536,7 @@ function renderCalendar() {
     .sort((a, b) => `${a.date || ""}`.localeCompare(`${b.date || ""}`));
   els.calendarHighlights.innerHTML = "";
   if (!items.length) {
-    els.calendarHighlights.appendChild(emptyState("Academic calendar will appear here once events are available."));
+    els.calendarHighlights.appendChild(emptyState(t("noCalendarItems")));
     return;
   }
 
@@ -338,14 +575,9 @@ function emptyState(message) {
 }
 
 function syllabusLabelText(value) {
-  switch (value) {
-    case "available":
-      return "있음";
-    case "missing":
-      return "없음";
-    default:
-      return "확인 필요";
-  }
+  if (value === "available") return t("syllabusAvailable");
+  if (value === "missing") return t("syllabusMissing");
+  return t("syllabusUnknown");
 }
 
 function groupCourseResults(results) {
@@ -387,7 +619,7 @@ function hasMeaningfulCourseQuery() {
   return values.some((value) => `${value || ""}`.trim() !== "");
 }
 
-function renderCourseFetchMoreAction(label = "Can't find it?") {
+function renderCourseFetchMoreAction(label = t("cantFind")) {
   if (!hasMeaningfulCourseQuery()) {
     return "";
   }
@@ -395,7 +627,7 @@ function renderCourseFetchMoreAction(label = "Can't find it?") {
   return `
     <div class="result-action-row">
       <span class="card-note">${escapeHtml(label)}</span>
-      <button class="small-button primary" data-action="fetch-more-courses" type="button">Find More</button>
+      <button class="small-button primary" data-action="fetch-more-courses" type="button">${escapeHtml(t("findMore"))}</button>
     </div>
   `;
 }
@@ -405,9 +637,9 @@ function renderCourseResults() {
   const groups = groupCourseResults(results);
   if (!groups.length) {
     els.courseResults.innerHTML = "";
-    els.courseResults.appendChild(emptyState("No course matches found. If needed, use Refresh Courses first."));
+    els.courseResults.appendChild(emptyState(t("noCourses")));
     if (hasMeaningfulCourseQuery()) {
-      els.courseResults.insertAdjacentHTML("beforeend", renderCourseFetchMoreAction("Still missing a course?"));
+      els.courseResults.insertAdjacentHTML("beforeend", renderCourseFetchMoreAction(t("stillMissing")));
     }
     return;
   }
@@ -428,11 +660,11 @@ function renderCourseResults() {
             <div class="section-row">
               <div class="section-row-compact">
                 <div class="card-meta">${escapeHtml(item.section)} • ${escapeHtml(item.scheduleType)} • ${escapeHtml(item.meetingSummary || "TBA")}</div>
-                <div class="card-note">${escapeHtml(item.instructor || "Staff")} • syllabus ${escapeHtml(syllabusLabelText(item.syllabusLabel))}</div>
+                <div class="card-note">${escapeHtml(item.instructor || t("staff"))} • ${escapeHtml(t("syllabus"))} ${escapeHtml(syllabusLabelText(item.syllabusLabel))}</div>
               </div>
               <div class="card-actions">
-                <button class="small-button primary" data-action="add-course" data-preview-kind="course" data-id="${item.id}">Add</button>
-                <button class="small-button" data-action="detail-course" data-id="${item.id}">Details</button>
+                <button class="small-button primary" data-action="add-course" data-preview-kind="course" data-id="${item.id}">${escapeHtml(t("add"))}</button>
+                <button class="small-button" data-action="detail-course" data-id="${item.id}">${escapeHtml(t("details"))}</button>
               </div>
             </div>
           `).join("")}
@@ -448,7 +680,7 @@ function renderPwgResults() {
   const results = state.search.pwgResults;
   if (!results.length) {
     els.pwgResults.innerHTML = "";
-    els.pwgResults.appendChild(emptyState("No PWG classes match the filters."));
+    els.pwgResults.appendChild(emptyState(t("noPwg")));
     return;
   }
 
@@ -465,7 +697,7 @@ function renderPwgResults() {
           <span class="tag">PWG</span>
         </div>
         <div class="card-actions">
-          <button class="small-button pwg" data-action="add-pwg" data-preview-kind="pwg" data-id="${item.id}">Add to plan</button>
+          <button class="small-button pwg" data-action="add-pwg" data-preview-kind="pwg" data-id="${item.id}">${escapeHtml(t("addToPlan"))}</button>
         </div>
       </article>
     `)
@@ -503,7 +735,7 @@ function syncResultActionStates() {
       const isSelected = isItemInCurrentPlan("course", button.dataset.id);
       button.dataset.action = isSelected ? "remove-plan-item" : "add-course";
       button.dataset.kind = "course";
-      button.textContent = isSelected ? "Remove" : "Add";
+      button.textContent = isSelected ? t("remove") : t("add");
       button.classList.toggle("primary", !isSelected);
       button.classList.toggle("danger", isSelected);
     });
@@ -516,7 +748,7 @@ function syncResultActionStates() {
       const isSelected = isItemInCurrentPlan("pwg", button.dataset.id);
       button.dataset.action = isSelected ? "remove-plan-item" : "add-pwg";
       button.dataset.kind = "pwg";
-      button.textContent = isSelected ? "Remove" : "Add to plan";
+      button.textContent = isSelected ? t("remove") : t("addToPlan");
       button.classList.toggle("pwg", !isSelected);
       button.classList.toggle("danger", isSelected);
     });
@@ -731,20 +963,20 @@ function renderTimetable() {
 
   const stats = computePlanStats(items);
   els.timetableSummary.innerHTML = `
-    <span class="summary-pill">${stats.total} selected items</span>
-    <span class="summary-pill">${stats.scheduledBlocks} scheduled blocks</span>
-    <span class="summary-pill ${stats.conflicts ? "conflict" : ""}">${stats.conflicts} conflicts</span>
-    <span class="summary-pill">Earliest ${stats.earliest}</span>
-    <span class="summary-pill">Latest ${stats.latest}</span>
+    <span class="summary-pill">${stats.total} ${escapeHtml(t("selectedItemCount"))}</span>
+    <span class="summary-pill">${stats.scheduledBlocks} ${escapeHtml(t("scheduledBlocks"))}</span>
+    <span class="summary-pill ${stats.conflicts ? "conflict" : ""}">${stats.conflicts} ${escapeHtml(t("conflict"))}</span>
+    <span class="summary-pill">${escapeHtml(t("earliest"))} ${stats.earliest}</span>
+    <span class="summary-pill">${escapeHtml(t("latest"))} ${stats.latest}</span>
   `;
 }
 
 function renderSelectedItems() {
   const items = currentPlanItems();
-  els.selectionCount.textContent = `${items.length} items`;
+  els.selectionCount.textContent = `${items.length} ${t("selectedItemCount")}`;
   if (!items.length) {
     els.selectedItems.innerHTML = "";
-    els.selectedItems.appendChild(emptyState("Start adding Yale courses and PWG classes."));
+    els.selectedItems.appendChild(emptyState(t("noResults")));
     return;
   }
 
@@ -760,8 +992,8 @@ function renderSelectedItems() {
         <div class="card-meta">${escapeHtml(item.kind === "course" ? item.title : item.instructor)}</div>
         <div class="card-note">${escapeHtml(item.meetingSummary || `${item.day} ${item.startTime} - ${item.endTime}`)}</div>
         <div class="card-actions">
-          ${item.kind === "course" ? `<button class="small-button" data-action="detail-course" data-id="${item.id}">Details</button>` : ""}
-          <button class="small-button danger" data-action="remove-plan-item" data-kind="${item.kind}" data-id="${item.id}">Remove</button>
+          ${item.kind === "course" ? `<button class="small-button" data-action="detail-course" data-id="${item.id}">${escapeHtml(t("details"))}</button>` : ""}
+          <button class="small-button danger" data-action="remove-plan-item" data-kind="${item.kind}" data-id="${item.id}">${escapeHtml(t("remove"))}</button>
         </div>
       </article>
     `)
@@ -910,14 +1142,14 @@ async function runCourseSearch() {
   }
 
   const shouldFetch = window.confirm(
-    "This course is not in the current local cache.\n\nWould you like to fetch it now from Yale Course Search?",
+    `${t("noCourses")}\n\n${t("findMore")}?`,
   );
 
   if (!shouldFetch) {
     return;
   }
 
-  setButtonBusy(els.refreshCoursesBtn, true, "Fetching...");
+  setButtonBusy(els.refreshCoursesBtn, true, t("fetching"));
   try {
     const result = await fetchJson("/api/update/courses", {
       method: "POST",
@@ -934,7 +1166,7 @@ async function runCourseSearch() {
     runCourseSearch.skipAutoFetchOnce = true;
     await runCourseSearch();
     if (!state.search.courseResults.length) {
-      alert("No matching courses were found in Yale Course Search for this query.");
+      alert(t("noCourseRemote"));
     }
   } finally {
     setButtonBusy(els.refreshCoursesBtn, false);
@@ -1244,7 +1476,7 @@ function exportPlans() {
   const currentPlan = getCurrentPlan();
   const items = currentPlanItems();
   if (!items.length) {
-    alert("Add at least one class or PWG item before exporting.");
+    alert(t("addBeforeExport"));
     return;
   }
 
@@ -1253,7 +1485,7 @@ function exportPlans() {
   ));
 
   if (!eventLines.length) {
-    alert("This plan does not contain any exportable scheduled meetings yet.");
+    alert(t("noExportMeetings"));
     return;
   }
 
@@ -1304,7 +1536,7 @@ async function importPlans(file) {
   const raw = await file.text();
   const parsed = JSON.parse(raw);
   if (!parsed?.plans?.length) {
-    throw new Error("Imported file does not contain any plans.");
+    throw new Error(t("importMissingPlans"));
   }
   const importedPlans = parsed.plans.map((plan, index) => normalizePlan(plan, `Imported Plan ${index + 1}`));
   const existingPlans = state.plans.filter((plan) => !plan.isStartupDraft);
@@ -1315,9 +1547,9 @@ async function importPlans(file) {
 }
 
 async function openCourseDetail(id) {
-  els.detailKicker.textContent = "Yale Course Detail";
-  els.detailTitle.textContent = "Loading...";
-  els.detailBody.innerHTML = `<div class="status-line">Fetching cached detail and syllabus status...</div>`;
+  els.detailKicker.textContent = t("detailKicker");
+  els.detailTitle.textContent = t("loading");
+  els.detailBody.innerHTML = `<div class="status-line">${escapeHtml(t("fetchingDetail"))}</div>`;
   els.detailModal.showModal();
 
   try {
@@ -1332,12 +1564,12 @@ async function openCourseDetail(id) {
     els.detailTitle.textContent = `${detail.courseCode} • ${detail.title}`;
 
     const syllabusBlock = detail.syllabusUrl
-      ? `<p><a class="small-button primary" href="${detail.syllabusUrl}" target="_blank" rel="noreferrer">Open syllabus</a></p>`
-      : `<div class="status-line">Syllabus status: ${escapeHtml(syllabusLabelText(detail.syllabusLabel))}</div>`;
+      ? `<p><a class="small-button primary" href="${detail.syllabusUrl}" target="_blank" rel="noreferrer">${escapeHtml(t("openSyllabus"))}</a></p>`
+      : `<div class="status-line">${escapeHtml(t("syllabusStatus", { status: syllabusLabelText(detail.syllabusLabel) }))}</div>`;
 
     const linkedSections = detail.linkedSections?.length
       ? `
-        <h4>Linked / alternate sections</h4>
+        <h4>${escapeHtml(t("linkedSections"))}</h4>
         <ul>
           ${detail.linkedSections.map((section) => `
             <li>${escapeHtml(section.section)} • ${escapeHtml(section.scheduleType)} • ${escapeHtml(section.meetingSummary)}</li>
@@ -1347,13 +1579,13 @@ async function openCourseDetail(id) {
       : "";
 
     els.detailBody.innerHTML = `
-      <div class="status-line">School: ${escapeHtml(detail.school)} • ${escapeHtml(detail.termLabel)} • ${escapeHtml(detail.scheduleType)}</div>
-      <div class="status-line">Meeting: ${escapeHtml(detail.meetingSummary)} • Instructor: ${escapeHtml(detail.instructor)}</div>
+      <div class="status-line">${escapeHtml(t("schoolDetail", { school: detail.school, term: detail.termLabel, type: detail.scheduleType }))}</div>
+      <div class="status-line">${escapeHtml(t("meetingDetail", { meeting: detail.meetingSummary, instructor: detail.instructor || t("staff") }))}</div>
       ${syllabusBlock}
-      <h4>Description</h4>
-      <p>${escapeHtml(detail.descriptionText || "No description available.")}</p>
+      <h4>${escapeHtml(t("description"))}</h4>
+      <p>${escapeHtml(detail.descriptionText || t("noDescription"))}</p>
       ${linkedSections}
-      ${detail.finalExam ? `<h4>Final Exam</h4><p>${escapeHtml(detail.finalExam)}</p>` : ""}
+      ${detail.finalExam ? `<h4>${escapeHtml(t("finalExam"))}</h4><p>${escapeHtml(detail.finalExam)}</p>` : ""}
     `;
 
     if (state.data.courses) {
@@ -1378,13 +1610,13 @@ async function openCourseDetail(id) {
       renderSelectedItems();
     }
   } catch (error) {
-    els.detailTitle.textContent = "Detail unavailable";
+    els.detailTitle.textContent = t("detailUnavailable");
     els.detailBody.innerHTML = `<div class="status-line alert">${escapeHtml(error.message)}</div>`;
   }
 }
 
 async function refreshCourseCache() {
-  setButtonBusy(els.refreshCoursesBtn, true, "Checking Yale Courses...");
+  setButtonBusy(els.refreshCoursesBtn, true, t("checkingCourses"));
   try {
     const payload = {
       year: els.courseYear.value,
@@ -1409,18 +1641,18 @@ async function refreshCourseCache() {
     renderWorkspace();
     alert(
       result.status === "updated"
-        ? `Course cache updated for ${result.query}. ${result.fetchedItemCount} item(s) fetched.`
-        : `No cache changes were detected for ${result.query}.`,
+        ? t("courseUpdated", { query: result.query, count: result.fetchedItemCount })
+        : t("noCacheChanges", { query: result.query }),
     );
   } catch (error) {
-    alert(`Course refresh failed: ${error.message}`);
+    alert(t("courseRefreshFailed", { message: error.message }));
   } finally {
     setButtonBusy(els.refreshCoursesBtn, false);
   }
 }
 
 async function refreshPwgCache() {
-  setButtonBusy(els.refreshPwgBtn, true, "Checking PWG...");
+  setButtonBusy(els.refreshPwgBtn, true, t("checkingPwg"));
   try {
     const result = await fetchJson("/api/update/pwg", { method: "POST" });
     if (result.status === "updated") {
@@ -1433,7 +1665,7 @@ async function refreshPwgCache() {
     }
     alert(result.message);
   } catch (error) {
-    alert(`PWG refresh failed: ${error.message}`);
+    alert(t("pwgRefreshFailed", { message: error.message }));
   } finally {
     setButtonBusy(els.refreshPwgBtn, false);
   }
@@ -1460,9 +1692,9 @@ function bindEvents() {
     if (!file) return;
     try {
       await importPlans(file);
-      alert("Plans imported successfully.");
+      alert(t("backupImported"));
     } catch (error) {
-      alert(`Import failed: ${error.message}`);
+      alert(t("importFailed", { message: error.message }));
     } finally {
       event.target.value = "";
     }
