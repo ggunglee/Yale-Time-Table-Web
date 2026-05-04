@@ -759,6 +759,8 @@ function renderSelectedItems() {
 }
 
 function renderComparison() {
+  if (!els.comparisonList) return;
+
   if (!state.plans.length) {
     els.comparisonList.innerHTML = "";
     els.comparisonList.appendChild(emptyState("No saved plans yet."));
