@@ -795,7 +795,6 @@ function renderWorkspace() {
   renderPlanControls();
   renderTimetable();
   renderSelectedItems();
-  renderComparison();
   syncResultActionStates();
 }
 
