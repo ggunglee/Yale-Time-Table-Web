@@ -9,7 +9,9 @@ const PORT = Number(process.env.PORT || 8420);
 const app = express();
 
 const appDir = path.join(__dirname, "app");
-const storageDir = path.join(__dirname, "storage");
+const bundledStorageDir = path.join(__dirname, "storage");
+const storageDir = process.env.STORAGE_DIR ? path.resolve(process.env.STORAGE_DIR) : bundledStorageDir;
+const shouldWriteServerCache = process.env.ENABLE_SERVER_CACHE_WRITES === "1" || Boolean(process.env.STORAGE_DIR);
 const calendarSourcePath = path.join(__dirname, "YALE CALENDAR.txt");
 const pwgSourcePath = path.join(__dirname, "SPRING 2026 PWG.txt");
 const calendarStorePath = path.join(storageDir, "academic-calendar.json");
@@ -36,6 +38,14 @@ function loadJsonFile(targetPath, fallback) {
 
 function saveJsonFile(targetPath, value) {
   fs.writeFileSync(targetPath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+}
+
+function copyBundledJsonIfAvailable(filename) {
+  const sourcePath = path.join(bundledStorageDir, filename);
+  const targetPath = path.join(storageDir, filename);
+  if (sourcePath === targetPath || fs.existsSync(targetPath) || !fs.existsSync(sourcePath)) return false;
+  fs.copyFileSync(sourcePath, targetPath);
+  return true;
 }
 
 function isoTimestamp() {
@@ -277,7 +287,7 @@ function parsePwgSeedSource() {
 
 function parsePwgTableFromHtml(html, currentTerm) {
   const decoded = decodeHtml(html);
-  const rows = decoded.matchAll(/<tr>\s*<th>(?<day>[^<]+)<\/th>\s*<th>(?<time>[\s\S]*?)<\/th>\s*<td><a href="(?<href>[^"]+)">(?<title>[^<]+)<\/a><\/td>\s*<td>(?<instructor>[\s\S]*?)<\/td>\s*<td>(?<pass>[\s\S]*?)<\/td>\s*<\/tr>/gi);
+  const rows = decoded.matchAll(/<tr>\s*<th[^>]*>(?<day>[\s\S]*?)<\/th>\s*<th[^>]*>(?<time>[\s\S]*?)<\/th>\s*<td[^>]*>\s*<a[^>]*href="(?<href>[^"]+)"[^>]*>(?<title>[\s\S]*?)<\/a>\s*<\/td>\s*<td[^>]*>(?<instructor>[\s\S]*?)<\/td>\s*<td[^>]*>(?<pass>[\s\S]*?)<\/td>\s*<\/tr>/gi);
   const items = [];
   for (const row of rows) {
     const time = parseTimeRange(row.groups.time);
@@ -309,6 +319,10 @@ function parsePwgTableFromHtml(html, currentTerm) {
 
 function ensureStorage() {
   ensureDirectory(storageDir);
+  copyBundledJsonIfAvailable("academic-calendar.json");
+  copyBundledJsonIfAvailable("pwg.json");
+  copyBundledJsonIfAvailable("courses.json");
+  copyBundledJsonIfAvailable("course-details.json");
   if (!fs.existsSync(calendarStorePath)) saveJsonFile(calendarStorePath, parseAcademicCalendarSource());
   if (!fs.existsSync(pwgStorePath)) saveJsonFile(pwgStorePath, parsePwgSeedSource());
   if (!fs.existsSync(courseStorePath)) {
@@ -336,9 +350,13 @@ async function yaleCourseApi(route, body, query = {}) {
   const response = await fetch(url, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      "User-Agent": "Yale-Time-Table/1.0",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+      "Origin": "https://courses.yale.edu",
       "Referer": "https://courses.yale.edu/",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "X-Requested-With": "XMLHttpRequest",
     },
     body: encodeURIComponent(JSON.stringify(body)),
   });
@@ -526,7 +544,15 @@ async function updateCourseCache({ term, year, semester, school, subject, keywor
     },
     items: mergedItems,
   };
-  saveJsonFile(courseStorePath, store);
+  const fetchedStore = {
+    metadata: {
+      ...store.metadata,
+      itemCount: fetchedItems.length,
+      cachedSubjects: [...new Set(fetchedItems.map((item) => item.subject))].sort(),
+    },
+    items: fetchedItems,
+  };
+  if (shouldWriteServerCache) saveJsonFile(courseStorePath, store);
   return {
     status,
     updated: status === "updated",
@@ -535,6 +561,8 @@ async function updateCourseCache({ term, year, semester, school, subject, keywor
     lastUpdated: store.metadata.lastUpdated,
     query: store.metadata.lastQuery,
     notes,
+    store,
+    fetchedStore,
   };
 }
 
@@ -578,18 +606,18 @@ async function updatePwgCache() {
   const response = await fetch("https://recreation.yale.edu/fitness-wellness-programs/group-fitness-classes");
   if (!response.ok) throw new Error(`PWG page failed: ${response.status}`);
   const html = await response.text();
-  const remoteTerm = html.match(/Group Fitness Classes:\s*((?:Spring|Fall)\s+20\d{2})/i)?.[1];
+  const remoteTerm = html.match(/Group Fitness Classes:\s*((?:(?:Spring|Summer|Fall)|(?:January|February|March|April|May|June|July|August|September|October|November|December))\s+20\d{2})/i)?.[1];
   if (!remoteTerm) {
     return { status: "failed", message: "Could not detect the PWG group fitness term." };
   }
-  if (remoteTerm !== "Fall 2026") {
+  const items = parsePwgTableFromHtml(html, remoteTerm);
+  if (!items.length) {
     return {
-      status: "no_update",
+      status: "failed",
       currentRemoteTerm: remoteTerm,
-      message: "Fall 2026 has not been published yet. Spring 2026 seed data remains active.",
+      message: `Detected ${remoteTerm}, but no PWG rows could be parsed.`,
     };
   }
-  const items = parsePwgTableFromHtml(html, remoteTerm);
   const store = {
     metadata: {
       source: "Yale Campus Recreation",
@@ -600,13 +628,14 @@ async function updatePwgCache() {
     },
     items,
   };
-  saveJsonFile(pwgStorePath, store);
+  if (shouldWriteServerCache) saveJsonFile(pwgStorePath, store);
   return {
     status: "updated",
     currentRemoteTerm: remoteTerm,
     itemCount: items.length,
     lastUpdated: store.metadata.lastUpdated,
-    message: "Fall 2026 PWG schedule was found and stored locally.",
+    message: `${remoteTerm} PWG schedule was found and stored locally.`,
+    store,
   };
 }
 
@@ -617,13 +646,13 @@ function extractSyllabusInfo(resourcesHtml = "") {
   return { status: "missing", label: "missing", url: null };
 }
 
-async function getCourseDetail(id) {
+async function getCourseDetail(id, courseOverride = null) {
   const detailStore = getCourseDetailStore();
   const existing = detailStore.items.find((item) => item.id === id);
   if (existing) return existing;
 
   const courseStore = getCourseStore();
-  const course = (courseStore.items || []).find((item) => item.id === id);
+  const course = courseOverride || (courseStore.items || []).find((item) => item.id === id);
   if (!course) {
     const error = new Error(`Course not found: ${id}`);
     error.status = 404;
@@ -666,18 +695,22 @@ async function getCourseDetail(id) {
     linkedSections,
     updatedAt: isoTimestamp(),
   };
-  detailStore.items = detailStore.items.filter((item) => item.id !== id).concat(detail);
-  saveJsonFile(courseDetailStorePath, detailStore);
-
-  for (const item of courseStore.items || []) {
-    if (item.id === id) {
-      item.syllabusStatus = detail.syllabusStatus;
-      item.syllabusLabel = detail.syllabusLabel;
-      item.syllabusUrl = detail.syllabusUrl;
-      item.detailFetched = true;
-    }
+  if (shouldWriteServerCache) {
+    detailStore.items = detailStore.items.filter((item) => item.id !== id).concat(detail);
+    saveJsonFile(courseDetailStorePath, detailStore);
   }
-  saveJsonFile(courseStorePath, courseStore);
+
+  if (shouldWriteServerCache) {
+    for (const item of courseStore.items || []) {
+      if (item.id === id) {
+        item.syllabusStatus = detail.syllabusStatus;
+        item.syllabusLabel = detail.syllabusLabel;
+        item.syllabusUrl = detail.syllabusUrl;
+        item.detailFetched = true;
+      }
+    }
+    saveJsonFile(courseStorePath, courseStore);
+  }
   return detail;
 }
 
@@ -723,6 +756,17 @@ app.get("/api/course/details", async (req, res, next) => {
   try {
     if (!req.query.id) return res.status(400).json({ error: "Missing course id." });
     return res.json(await getCourseDetail(`${req.query.id}`));
+  } catch (error) {
+    return next(error);
+  }
+});
+
+app.post("/api/course/details", async (req, res, next) => {
+  try {
+    const course = req.body?.course;
+    const id = `${req.body?.id || course?.id || ""}`;
+    if (!id) return res.status(400).json({ error: "Missing course id." });
+    return res.json(await getCourseDetail(id, course || null));
   } catch (error) {
     return next(error);
   }

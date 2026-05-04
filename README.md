@@ -28,7 +28,9 @@ The app serves the frontend from `app/` and keeps the existing API paths under `
 
 ## Storage Note
 
-The copied `storage/*.json` files are bundled with the deploy and work as the initial cache.
-Runtime updates from the Refresh buttons write to local files on the server. On Render free web
-services, those runtime file changes may be lost after redeploys or restarts. For permanent shared
-updates, add a Render Disk or move the cache to a database/storage service later.
+The copied `storage/*.json` files are bundled with the deploy and work as the shared initial cache.
+User plans and refresh results are saved in each browser's `localStorage`, so Render Free works
+without a persistent disk and users do not see each other's saved schedules or local refreshes.
+
+The server still supports `STORAGE_DIR`/`ENABLE_SERVER_CACHE_WRITES=1` for deployments that want a
+shared persistent server cache, but it is intentionally off by default for free Render hosting.

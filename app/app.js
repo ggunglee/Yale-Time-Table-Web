@@ -1,4 +1,5 @@
 const STORAGE_KEY = "yale-semester-planner:v1";
+const DATA_STORAGE_KEY = "yale-semester-planner:data:v1";
 const PX_PER_MINUTE = 2;
 const DAY_KEYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const DAY_START_MINUTES = 7 * 60;
@@ -16,6 +17,10 @@ const UI_STATE = {
 const state = {
   data: {
     calendar: null,
+    pwg: null,
+    courses: null,
+  },
+  localData: {
     pwg: null,
     courses: null,
   },
@@ -117,17 +122,27 @@ function applyTimeGridMetrics(dayEndMinutes = DEFAULT_DAY_END_MINUTES) {
 function loadLocalState() {
   const raw = localStorage.getItem(STORAGE_KEY);
   let savedPlans = [];
+  let savedCurrentPlanId = null;
   try {
     const parsed = raw ? JSON.parse(raw) : {};
     savedPlans = Array.isArray(parsed?.plans)
       ? parsed.plans.map((plan) => normalizePlan(plan)).filter((plan) => !isTemporaryBlankPlan(plan))
       : [];
+    savedCurrentPlanId = parsed?.currentPlanId || null;
   } catch {
     savedPlans = [];
   }
 
+  if (savedPlans.length) {
+    state.plans = savedPlans;
+    state.currentPlanId = savedPlans.some((plan) => plan.id === savedCurrentPlanId)
+      ? savedCurrentPlanId
+      : savedPlans[0].id;
+    return;
+  }
+
   const startupPlan = createStartupPlan();
-  state.plans = [startupPlan, ...savedPlans];
+  state.plans = [startupPlan];
   state.currentPlanId = startupPlan.id;
 }
 
@@ -145,6 +160,50 @@ function persistLocalState() {
   );
 }
 
+function mergeCourseStores(baseStore = { metadata: {}, items: [] }, updateStore = { metadata: {}, items: [] }) {
+  const mergedById = new Map((baseStore.items || []).map((item) => [item.id, item]));
+  for (const item of updateStore.items || []) mergedById.set(item.id, item);
+  const items = [...mergedById.values()].sort((a, b) => (
+    `${a.year}|${a.termCode}|${a.subject}|${a.catalogNumber}|${a.section}`.localeCompare(`${b.year}|${b.termCode}|${b.subject}|${b.catalogNumber}|${b.section}`)
+  ));
+  return {
+    metadata: {
+      ...(baseStore.metadata || {}),
+      ...(updateStore.metadata || {}),
+      itemCount: items.length,
+      cachedSubjects: [...new Set(items.map((item) => item.subject).filter(Boolean))].sort(),
+    },
+    items,
+  };
+}
+
+function loadLocalData() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(DATA_STORAGE_KEY) || "{}");
+    state.localData.courses = parsed?.courses?.items?.length ? parsed.courses : null;
+    state.localData.pwg = parsed?.pwg?.items?.length ? parsed.pwg : null;
+  } catch {
+    state.localData.courses = null;
+    state.localData.pwg = null;
+  }
+}
+
+function persistLocalData() {
+  localStorage.setItem(
+    DATA_STORAGE_KEY,
+    JSON.stringify({
+      courses: state.localData.courses,
+      pwg: state.localData.pwg,
+    }),
+  );
+}
+
+function applyBootstrapData(result) {
+  state.data.calendar = result.calendar;
+  state.data.courses = mergeCourseStores(result.courses || { metadata: {}, items: [] }, state.localData.courses || { metadata: {}, items: [] });
+  state.data.pwg = state.localData.pwg || result.pwg;
+}
+
 function getCurrentPlan() {
   return state.plans.find((plan) => plan.id === state.currentPlanId) || state.plans[0];
 }
@@ -152,7 +211,15 @@ function getCurrentPlan() {
 async function fetchJson(url, options = {}) {
   const response = await fetch(url, options);
   if (!response.ok) {
-    throw new Error(`Request failed: ${response.status}`);
+    let message = `Request failed: ${response.status}`;
+    try {
+      const payload = await response.json();
+      if (payload?.message) message = payload.message;
+      else if (payload?.error) message = payload.error;
+    } catch {
+      // Keep the generic HTTP message when the response body is not JSON.
+    }
+    throw new Error(message);
   }
   return response.json();
 }
@@ -734,20 +801,26 @@ function renderPanelState() {
   const mappings = [
     { key: "course", toggle: els.coursePanelToggle, body: els.coursePanelBody },
     { key: "pwg", toggle: els.pwgPanelToggle, body: els.pwgPanelBody },
+    { key: "selected", toggle: els.selectedPanelToggle, body: els.selectedPanelBody },
   ];
 
   mappings.forEach(({ key, toggle, body }) => {
     const isOpen = UI_STATE.panels[key];
+    if (!toggle || !body) return;
     toggle.setAttribute("aria-expanded", `${isOpen}`);
     body.classList.toggle("is-collapsed", !isOpen);
   });
 }
 
 function togglePanel(key) {
-  const nextValue = !UI_STATE.panels[key];
-  UI_STATE.panels.course = false;
-  UI_STATE.panels.pwg = false;
-  UI_STATE.panels[key] = nextValue;
+  if (key === "course" || key === "pwg") {
+    const nextValue = !UI_STATE.panels[key];
+    UI_STATE.panels.course = false;
+    UI_STATE.panels.pwg = false;
+    UI_STATE.panels[key] = nextValue;
+  } else {
+    UI_STATE.panels[key] = !UI_STATE.panels[key];
+  }
   renderPanelState();
 }
 
@@ -769,6 +842,37 @@ function handleSearchFieldKeydown(event) {
   }
 }
 
+function searchLocalCourses(query) {
+  let items = [...(state.data.courses?.items || [])];
+  if (query.year) items = items.filter((item) => `${item.year}` === `${query.year}`);
+  if (query.semester) items = items.filter((item) => `${item.semester}` === `${query.semester}`);
+  if (query.school) {
+    const value = `${query.school}`.toLowerCase();
+    items = items.filter((item) => `${item.school}`.toLowerCase().includes(value) || `${item.schoolCode}`.toLowerCase().includes(value));
+  }
+  if (query.subject) {
+    const value = `${query.subject}`.toLowerCase();
+    items = items.filter((item) => `${item.subject}`.toLowerCase().includes(value));
+  }
+  if (query.keyword) {
+    const value = `${query.keyword}`.toLowerCase();
+    items = items.filter((item) => `${item.keywordBlob}`.toLowerCase().includes(value));
+  }
+  return items.sort((a, b) => `${a.year}|${a.termCode}|${a.subject}|${a.catalogNumber}|${a.section}|${a.meetingBlocks?.[0]?.dayOrder ?? 99}`.localeCompare(`${b.year}|${b.termCode}|${b.subject}|${b.catalogNumber}|${b.section}|${b.meetingBlocks?.[0]?.dayOrder ?? 99}`));
+}
+
+function searchLocalPwg(query) {
+  let items = [...(state.data.pwg?.items || [])];
+  if (query.keyword) {
+    const value = `${query.keyword}`.toLowerCase();
+    items = items.filter((item) => `${item.keywordBlob}`.toLowerCase().includes(value));
+  }
+  if (query.day) items = items.filter((item) => item.day === query.day);
+  if (query.startMinutes) items = items.filter((item) => item.endMinutes >= Number(query.startMinutes));
+  if (query.endMinutes) items = items.filter((item) => item.startMinutes <= Number(query.endMinutes));
+  return items.sort((a, b) => `${a.dayOrder}|${a.startMinutes}|${a.title}`.localeCompare(`${b.dayOrder}|${b.startMinutes}|${b.title}`));
+}
+
 async function runCourseSearch() {
   const payload = {
     year: els.courseYear.value,
@@ -777,10 +881,8 @@ async function runCourseSearch() {
     subject: els.courseSubject.value,
     keyword: els.courseKeyword.value,
   };
-  const params = new URLSearchParams(payload);
 
-  const result = await fetchJson(`/api/search/courses?${params.toString()}`);
-  state.search.courseResults = result.items || [];
+  state.search.courseResults = searchLocalCourses(payload);
   renderCourseResults();
 
   const hasMeaningfulQuery = Object.values(payload).some((value) => `${value || ""}`.trim() !== "");
@@ -799,14 +901,17 @@ async function runCourseSearch() {
 
   setButtonBusy(els.refreshCoursesBtn, true, "Fetching...");
   try {
-    await fetchJson("/api/update/courses", {
+    const result = await fetchJson("/api/update/courses", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(payload),
     });
-    state.data.courses = await fetchJson("/api/bootstrap").then((bootstrapPayload) => bootstrapPayload.courses);
+    const fetchedStore = result.fetchedStore || result.store;
+    state.localData.courses = mergeCourseStores(state.localData.courses || { metadata: {}, items: [] }, fetchedStore);
+    state.data.courses = mergeCourseStores(state.data.courses, fetchedStore);
+    persistLocalData();
     renderMeta();
     runCourseSearch.skipAutoFetchOnce = true;
     await runCourseSearch();
@@ -819,13 +924,13 @@ async function runCourseSearch() {
 }
 
 async function runPwgSearch() {
-  const params = new URLSearchParams();
-  if (els.pwgKeyword.value) params.set("keyword", els.pwgKeyword.value);
-  if (els.pwgDay.value) params.set("day", els.pwgDay.value);
-  if (els.pwgStart.value) params.set("startMinutes", timeInputToMinutes(els.pwgStart.value));
-  if (els.pwgEnd.value) params.set("endMinutes", timeInputToMinutes(els.pwgEnd.value));
-  const result = await fetchJson(`/api/search/pwg?${params.toString()}`);
-  state.search.pwgResults = result.items || [];
+  const query = {
+    keyword: els.pwgKeyword.value,
+    day: els.pwgDay.value,
+    startMinutes: els.pwgStart.value ? timeInputToMinutes(els.pwgStart.value) : "",
+    endMinutes: els.pwgEnd.value ? timeInputToMinutes(els.pwgEnd.value) : "",
+  };
+  state.search.pwgResults = searchLocalPwg(query);
   renderPwgResults();
 }
 
@@ -836,14 +941,13 @@ function timeInputToMinutes(value) {
 
 async function bootstrap() {
   loadLocalState();
+  loadLocalData();
   normalizeStaticCopy();
   applyTimeGridMetrics();
   createTimeAxis();
 
   const result = await fetchJson("/api/bootstrap");
-  state.data.calendar = result.calendar;
-  state.data.pwg = result.pwg;
-  state.data.courses = result.courses;
+  applyBootstrapData(result);
 
   renderMeta();
   renderCalendar();
@@ -1199,7 +1303,14 @@ async function openCourseDetail(id) {
   els.detailModal.showModal();
 
   try {
-    const detail = await fetchJson(`/api/course/details?id=${encodeURIComponent(id)}`);
+    const course = state.data.courses?.items?.find((item) => item.id === id);
+    const detail = await fetchJson("/api/course/details", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id, course }),
+    });
     els.detailTitle.textContent = `${detail.courseCode} • ${detail.title}`;
 
     const syllabusBlock = detail.syllabusUrl
@@ -1235,6 +1346,16 @@ async function openCourseDetail(id) {
         target.syllabusUrl = detail.syllabusUrl;
         target.detailFetched = true;
       }
+      if (state.localData.courses) {
+        const localTarget = state.localData.courses.items.find((item) => item.id === id);
+        if (localTarget) {
+          localTarget.syllabusStatus = detail.syllabusStatus;
+          localTarget.syllabusLabel = detail.syllabusLabel;
+          localTarget.syllabusUrl = detail.syllabusUrl;
+          localTarget.detailFetched = true;
+          persistLocalData();
+        }
+      }
       renderCourseResults();
       renderSelectedItems();
     }
@@ -1261,7 +1382,10 @@ async function refreshCourseCache() {
       },
       body: JSON.stringify(payload),
     });
-    state.data.courses = await fetchJson("/api/bootstrap").then((payload) => payload.courses);
+    const fetchedStore = result.fetchedStore || result.store;
+    state.localData.courses = mergeCourseStores(state.localData.courses || { metadata: {}, items: [] }, fetchedStore);
+    state.data.courses = mergeCourseStores(state.data.courses, fetchedStore);
+    persistLocalData();
     renderMeta();
     await runCourseSearch();
     renderWorkspace();
@@ -1270,6 +1394,8 @@ async function refreshCourseCache() {
         ? `Course cache updated for ${result.query}. ${result.fetchedItemCount} item(s) fetched.`
         : `No cache changes were detected for ${result.query}.`,
     );
+  } catch (error) {
+    alert(`Course refresh failed: ${error.message}`);
   } finally {
     setButtonBusy(els.refreshCoursesBtn, false);
   }
@@ -1280,71 +1406,19 @@ async function refreshPwgCache() {
   try {
     const result = await fetchJson("/api/update/pwg", { method: "POST" });
     if (result.status === "updated") {
-      state.data.pwg = await fetchJson("/api/bootstrap").then((payload) => payload.pwg);
+      state.localData.pwg = result.store;
+      state.data.pwg = result.store;
+      persistLocalData();
       renderMeta();
       await runPwgSearch();
       renderWorkspace();
     }
     alert(result.message);
+  } catch (error) {
+    alert(`PWG refresh failed: ${error.message}`);
   } finally {
     setButtonBusy(els.refreshPwgBtn, false);
   }
-}
-
-function renderSelectedItems() {
-  const items = currentPlanItems();
-  els.selectionCount.textContent = `${items.length} items`;
-  if (!items.length) {
-    els.selectedItems.innerHTML = "";
-    els.selectedItems.appendChild(emptyState("Start adding Yale courses and PWG classes."));
-    return;
-  }
-
-  els.selectedItems.innerHTML = items
-    .map((item) => `
-      <article class="selected-card selected-card-simple">
-        <strong class="selected-title">${escapeHtml(item.kind === "course" ? item.courseCode : item.title)}</strong>
-        <div class="card-actions">
-          ${item.kind === "course" ? `<button class="small-button" data-action="detail-course" data-id="${item.id}">Details</button>` : ""}
-          <button class="small-button danger" data-action="remove-plan-item" data-kind="${item.kind}" data-id="${item.id}">Delete</button>
-        </div>
-      </article>
-    `)
-    .join("");
-}
-
-function renderWorkspace() {
-  renderPlanControls();
-  renderTimetable();
-  renderSelectedItems();
-  syncResultActionStates();
-}
-
-function renderPanelState() {
-  const mappings = [
-    { key: "course", toggle: els.coursePanelToggle, body: els.coursePanelBody },
-    { key: "pwg", toggle: els.pwgPanelToggle, body: els.pwgPanelBody },
-    { key: "selected", toggle: els.selectedPanelToggle, body: els.selectedPanelBody },
-  ];
-
-  mappings.forEach(({ key, toggle, body }) => {
-    const isOpen = UI_STATE.panels[key];
-    if (!toggle || !body) return;
-    toggle.setAttribute("aria-expanded", `${isOpen}`);
-    body.classList.toggle("is-collapsed", !isOpen);
-  });
-}
-
-function togglePanel(key) {
-  if (key === "course" || key === "pwg") {
-    const nextValue = !UI_STATE.panels[key];
-    UI_STATE.panels.course = false;
-    UI_STATE.panels.pwg = false;
-    UI_STATE.panels[key] = nextValue;
-  } else {
-    UI_STATE.panels[key] = !UI_STATE.panels[key];
-  }
-  renderPanelState();
 }
 
 function bindEvents() {
